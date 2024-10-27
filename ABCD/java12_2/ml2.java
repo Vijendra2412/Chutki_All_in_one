@@ -1145,6 +1145,9 @@
 //     }
 // }
 
+import java.sql.Array;
+import java.util.Arrays;
+
 /**
  * ml2
  */
@@ -1207,8 +1210,8 @@
 // }
 // }
 
-class jdk {
-    public static void main(String[] args) {
+// class jdk {
+//     public static void main(String[] args) {
         // int x[][] = {
         // {1,2},
         // {3,4}
@@ -1264,9 +1267,9 @@ class jdk {
 
         // System.out.println(x==y);
 
-        int x[] = { 1, 2, 3, 0 };
-        int y[] = { 4, 5, 6 };
-        int z[] = new int[x.length + y.length];
+        // int x[] = { 1, 2, 3, 0 };
+        // int y[] = { 4, 5, 6 };
+        // int z[] = new int[x.length + y.length];
 
         // System.out.println(" ist array");
         // for(int i=0;i<x.length;i++){
@@ -1283,12 +1286,212 @@ class jdk {
         // System.out.print(i);
         // }
 
-        System.arraycopy(x, 0, z, 0, x.length);
-        System.arraycopy(y, 0, z,  x.length, y.length);
-        for (int i : z) {
-            System.out.print(i);
-        }
+        // System.arraycopy(x, 0, z, 0, x.length);
+        // System.arraycopy(y, 0, z,  x.length, y.length);
+        // for (int i : z) {
+        //     System.out.print(i);
+        // }
 
 
-    }
-}
+//     }
+// }
+
+// class jdk {
+
+//     public static void main(String[] args) {
+//         int [] arr1 = {1,2,3,4};
+//         int [] arr2 = new int[arr1.length];
+
+//         for(int i=0;i<arr1.length;i++){
+//             arr2[i] = arr1[i];
+//         }
+//         System.out.println("original array");
+//         for(int i : arr1){
+//             System.out.println( i+" ");
+//         }
+
+//         System.out.println("coppy array ");
+//         for(int i:arr2){
+//         System.out.println( i + " ");
+//         }
+
+//     }
+// }
+
+//  find frequncy
+
+// class jdk{
+//     public static void main(String[] args) {
+//         int [] arr1 = {1,2,3,4,5,1,4,3};
+//         int [] freq = new int[arr1.length];
+//         int visited = -1;
+//         for(int i =0; i<arr1.length;i++){
+//             int count = 1;
+//             for(int j = i+1;j<arr1.length;j++){
+//                 if(arr1[i] == arr1[j]){
+//                     count++;
+//                     freq[j] = visited;
+//                 }
+//             }
+//             if(freq[i] != visited){
+//                 freq[i] = count;
+//             }
+           
+//         }
+//         System.out.println("Element | Frequency");
+//         for(int i=0;i<freq.length;i++){
+//             if(freq[i] != visited){
+//                 System.out.println(" "+ arr1[i] + " | " +  freq[i]);
+//             }
+//         }
+//     }
+// }
+
+// // left rotate 
+// class jdk {
+//     // Defines a class named "jdk"
+
+//     public static void main(String[] args) {
+//         // Main method - entry point of the program
+        
+//         int arr[] = {1,2,3,4,5};
+//         // Declares and initializes an integer array with values 1,2,3,4,5
+        
+//         int n = 2;
+//         // Declares variable n and sets it to 2 - this will be the number of left rotations
+        
+//         for(int i = 0; i < n; i++) {
+//             // Outer loop that runs n times (2 times in this case)
+            
+//             int first = arr[0];
+//             // Stores the first element of array in variable 'first'
+            
+//             for(int j = 0; j < arr.length-1; j++) {
+//                 // Inner loop runs from 0 to array length-1
+                
+//                 arr[j] = arr[j + 1];
+//                 // Shifts each element one position to the left
+//             }
+            
+//             arr[arr.length-1] = first;
+//             // Places the stored first element at the last position
+//         }
+        
+//         System.out.println("array after left rotate:- ");
+//         // Prints a message
+        
+//         for(int i : arr) {
+//             // Enhanced for loop (for-each) to iterate through array
+            
+//             System.out.print(i + " ");
+//             // Prints each element followed by a space
+//         }
+//     }
+// }
+
+// class duplicate{
+//     public static void main(String[] args) {
+//         int [] arr = {1,1,2,3,4,2,4};
+//         for(int i =0;i<arr.length;i++){
+//             for(int j= i+1;j<arr.length;j++){
+//                 if(arr[i] == arr[j]){
+//                     System.out.println(arr[i]+" ");
+//                     break;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// class UniqueElements {
+//     public static void main(String[] args) {
+//         int[] arr = {1,1,2,3,4,2,4};
+//         System.out.println("Unique elements are:");
+        
+//         for(int i = 0; i < arr.length; i++) {
+//             boolean isUnique = true;
+            
+//             // Check if element appears anywhere else in array
+//             for(int j = 0; j < arr.length; j++) {
+//                 if(i != j && arr[i] == arr[j]) {
+//                     isUnique = false;
+//                     break;
+//                 }
+//             }
+            
+//             // If element is unique, print it
+//             if(isUnique) {
+//                 System.out.print(arr[i] + " ");
+//             }
+//         }
+//     }
+// }
+
+
+
+// class EfficientUniqueElements {
+//     public static void main(String[] args) {
+//         int[] arr = {1,1,2,3,4,2,4};
+        
+//         // Create frequency array
+//         int[] freq = new int[100];  // Assuming elements are < 100
+        
+//         // Count frequency of each element
+//         for(int i = 0; i < arr.length; i++) {
+//             freq[arr[i]]++;
+//         }
+        
+//         System.out.println("Unique elements are:");
+//         // Print elements with frequency 1
+//         for(int i = 0; i < arr.length; i++) {
+//             if(freq[arr[i]] == 1) {
+//                 System.out.print(arr[i] + " ");
+//             }
+//         }
+//     }
+// }
+
+// class findEvenPosition{
+//     public static void main(String[] args) {
+//         int arr[] = {1,2,3,4,5,6,7,3,9};
+//         System.out.println(" element at even positions: ");
+//         for(int i = 0;i<arr.length;i+=2){
+//             System.out.print(arr[i] + " ");
+//         }
+//     }
+// }
+
+// class largest_element{
+//     public static void main(String[] args) {
+//         int [] arr = {1,2,3,4,5,6};
+//         int max[] = arr[0];
+//         for(int i = 1;i<arr.length;i++){
+//             if(arr[i]>max){
+//                 max = arr[i];
+//             }
+//         }
+//         System.out.println("Largest element is:- " + max);
+//     }
+// }
+
+// class sumArr{
+//     public static void main(String[] args) {
+//         int[] arr = {1,2,3,4,5,6,7};
+//         int sum = 0;
+//         for(int i : arr){
+//             sum+=i;
+//         }
+//         System.out.println("sum of array is:- " + sum);
+//     }
+// }
+
+// class sortarr{
+//     public static void main(String[] args) {
+//         int [] arr = {1,4,2,3,6,5,7};
+//         Arrays.sort(arr);
+//         System.out.println("sorted array is:- ");
+//         for(int i:arr){
+//             System.out.print(i);
+//         }
+//     }
+// }
