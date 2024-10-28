@@ -1495,3 +1495,147 @@ import java.util.Arrays;
 //         }
 //     }
 // }
+
+// class jdk{
+//         public static void main(String[] args) {
+//               int originalnum = 123;
+//               int reverse = 0;
+//               for(int num = originalnum; num!=0; num/=10){
+//                 int digit = num%10;
+//                 reverse = reverse*10 +digit;
+//               }
+//               System.out.println("reverse is:- " + reverse);
+//         }
+// }
+
+// class jdk{
+//         public static void main(String[] args) {
+//                 int x = 123;
+//                 int y = 0;
+//                 int a =0;
+
+//                 for(int i=0;i<=x;i++){
+//                         int z =x%10;
+
+//                         a +=z;
+//                         x/=10;
+//                         System.out.print(z);
+
+
+//                 }
+//                 System.out.println(" " + a);
+//         }
+// }
+
+
+// class jdk {
+//         public static void main(String[] args) {
+//             int x = 123;  // original number
+//             int temp = x; // store x in a temporary variable
+//             int a = 0;    // sum of digits
+    
+//             while(temp > 0) {  // changed to while loop
+//                 int z = temp % 10;
+//                 a += z;
+//                 temp /= 10;
+//                 System.out.print(z);
+//             }
+//             System.out.println(" " + a);
+//         }
+//     }
+
+
+//     class jdk {
+//         public static void main(String[] args) {
+//             int x = 123;
+//             int temp = x;
+//             int digits = 0;  // count number of digits
+            
+//             // First loop to count digits
+//             for(int i = temp; i > 0; i /= 10) {
+//                 digits++;
+//             }
+            
+//             temp = x;  // reset temp to original value
+//             int a = 0;
+            
+//             // Second loop to extract and sum digits
+//             for(int i = 0; i < digits; i++) {
+//                 int z = temp % 10;
+//                 a += z;
+//                 temp /= 10;
+//                 System.out.print(z);
+//             }
+//             System.out.println(" " + a);
+//         }
+//     }
+
+
+// class jdk{
+//         public static void main(String[] args) {
+//                 int original = 123234;
+//                 int count =0;
+//                 for(int num = original; num!=0;num/=10){
+//                         count++;
+//                 }
+//                 System.out.println(count);
+//         }
+// }
+
+// class palin{
+//         public static void main(String[] args) {
+//                 int original = 123;
+//                 int reverse = 0;
+//                 int temp = original;
+
+//                 for(;temp!=0;temp/=10){
+//                         int digit = temp%10;
+//                         reverse = reverse*10 +digit;
+//                 }
+
+//                 if(original == reverse){
+//                         System.out.println(" pallindrome");
+//                 }
+//                 else{
+//                         System.out.println("not pallin drome");
+//                 }
+
+
+//         }
+// }
+
+class jdk{
+        public static void main(String[] args) {
+
+                // square  
+
+                // for(int i=1;i<=10;i++){
+                //         System.out.println("square of "+ i + " = "+(i*i));
+                // }
+
+                //---------------------------------------------------
+
+                // int original =3945;
+                // int largest = 0;
+                // for(int num= original ; num!=0;num/=10){
+                //         int digit = num%10;
+                //         if(digit>largest){
+                //                 largest =digit;
+                //         }
+                // }
+                // System.out.println("largest is " + largest);
+
+                //----------------------------------------------------------
+
+                // String str = "Pradeep";
+                // int count =0;
+                // for(int i=0;i<str.length();i++){
+                //         char ch = str.charAt(i);
+                //         if("aeiouAEIOU".indexOf(ch)!=-1 ){
+                //                 count++;
+                //         }
+                // }
+                // System.out.println("number of vowels: "  + count);
+
+        }
+}

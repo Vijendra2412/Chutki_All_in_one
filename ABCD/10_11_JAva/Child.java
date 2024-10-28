@@ -1979,12 +1979,74 @@ System.out.println("Invalid month");
 // }
 
 
-// static binding and dynamic binding 
+// // static binding and dynamic binding 
+// class Parent {    // Using meaningful class name instead of 'jdk'
+//     void display() {    // Using meaningful method name instead of 'abc'
+//         System.out.println("This is Parent class");
+//     }
+// }
+
+// public class Child extends Parent {    // Making class public since it contains main
+//      // Good practice to use @Override annotation
+//     void display() {
+//         System.out.println("This is Child class");
+//     }
+
+//     public static void main(String[] args) {
+//         Parent obj = new Child();    // Parent reference but Child object
+//         obj.display();    // Will call Child class's display method
+//     }
+// }
 
 
 
 
+// class jkl{
+//     public static void main(String[] args) {
+//         jkl obj =  null;
+//         System.out.println(obj instanceof jkl);
+//     }
+// }
+class JKL {
+    // parent class
+}
+
+// class Child extends JKL {
+//     static void method(JKL j) {
+//         if(j instanceof Child) {
+//             Child c = (Child)j;  // downcasting
+//             System.out.println("Downcasting performed");
+//         } else {
+//             System.out.println("Cannot perform downcasting");
+//         }
+//     }
+    
+//     public static void main(String[] args) {
+//         // Create child class instance to demonstrate downcasting
+//         // JKL j = new Child();  // Use child instance instead of parent
+//         // Child.method(j);
+        
+//         // // This will not allow downcasting
+//         // JKL j2 = new JKL();
+//         // Child.method(j2);
+//     }
+// }
 
 
+// class jkl{
 
+// }
+
+// class child extends jkl{
+//     static void method(jkl j){
+//         child c = (child)j;
+//         System.out.println("downcasting performed");
+//     }
+//     public static void main(String[] args) {
+//         jkl j = new child();
+//         child.method(j);
+//     }
+// }
+
+//abstractions
 
