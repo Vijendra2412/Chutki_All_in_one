@@ -2050,3 +2050,130 @@ class JKL {
 
 //abstractions
 
+// abstract class cls{
+//    abstract void method();
+// }
+// class child extends cls{
+//     void method(){
+//         System.out.println(" compile...");
+//     }
+//     public static void main(String[] args) {
+//         cls obj = new child();
+//         obj.method();
+//     }
+// }
+
+// abstract class Bank{
+//     abstract int getrateIntrest();
+// }
+// class union extends Bank{
+//     int getrateIntrest(){
+//         return 11;
+//     }
+// }
+// class Sbi extends Bank{
+//     int getrateIntrest(){
+//         return 7;
+//     }
+// }
+
+// class jk{
+//     public static void main(String[] args) {
+//         Bank obj;
+
+//         obj = new union();
+//         System.out.println("intrest is " + obj.getrateIntrest() + "%");
+
+//         obj = new Sbi();
+//         System.out.println("intrest is " + obj.getrateIntrest() + "%");
+//     }
+// }
+
+
+// interface A{
+//     void a();
+//     void b();
+//     void c();
+//     void d();
+// }
+
+// abstract class B implements A{
+//     public void c(){
+//         System.out.println(" its c");
+//     }
+// }
+
+// class Z extends B{
+
+//     public void b(){
+//         System.out.println(" its b ");
+//     }
+//     public void a(){
+//         System.out.println(" its a ");
+//     }
+//     public void d(){
+//         System.out.println(" its d ");
+//     }
+// }
+// class al{
+//     public static void main(String[] args) {
+//         A obj  = new Z();
+//         obj.a();
+//         obj.b();
+//         obj.c();
+//         obj.d();
+//     }
+// }
+
+// interface kl{
+//     void method();
+// }
+
+// interface klm{
+//     void method1();
+// }
+
+// class child implements kl,klm{
+//    public void method(){
+//         System.out.println(" hello world ");
+//     }
+//     public void method1(){
+//         System.out.println(" hey vj ");
+//     }
+// public static void main(String[] args) {
+//     child obj =  new child();
+//     obj.method();
+//     obj.method1();
+// }
+// }
+
+// class Non {
+//     // Interface converted to class
+//     private int sqr(int x) {
+//         return x * x;
+//     }
+    
+//     public void A() {
+//         System.out.println("Parent class");
+//     }
+// }
+
+// class Rectangle extends Non {  // Changed implements to extends
+    
+//     public void A() {
+//         System.out.println("its vj class");
+//     }
+// }
+
+// class Dk {
+//     public static void main(String[] args) {
+//         Non obj = new Rectangle();
+//         obj.A();
+//         // This won't work because sqr is private:
+//         // System.out.println(obj.sqr(3));  
+        
+//         // To access private method, we need to make it accessible through a public method
+//         Rectangle rect = new Rectangle();
+//         rect.A();
+//     }
+// }
