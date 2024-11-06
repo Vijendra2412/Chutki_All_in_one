@@ -440,6 +440,14 @@ Scanner sc = new Scanner(System.in);
 // } while (i>=10);
 
 
+int x =123;
+int reversed = 0;
+for(; x!=0;x/=10){
+    int digit = x%10;
+    reversed = reversed*10 + digit;
+}
+System.out.println("reversed:-  " + reversed);
+
 
     }
 }

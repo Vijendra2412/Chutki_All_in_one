@@ -1267,7 +1267,6 @@ System.out.println("Invalid month");
 //     }
 // }
 
-
 // by refrence variable 
 // by method 
 // by constructor
@@ -1292,7 +1291,6 @@ System.out.println("Invalid month");
 //     }
 // }
 
-
 // import java.util.*;
 // class rectangle{
 //     int length;
@@ -1305,7 +1303,7 @@ System.out.println("Invalid month");
 //     void area(){
 //         System.out.println(length*breadth);
 //     }
-   
+
 // }
 
 // class zz{
@@ -1315,7 +1313,7 @@ System.out.println("Invalid month");
 
 //         System.out.println(" enter the length ");
 //         int length = sc.nextInt();
-        
+
 //         System.out.println(" enter ur breadth ");
 //         int breadth = sc.nextInt();
 
@@ -1345,7 +1343,7 @@ System.out.println("Invalid month");
 //     }
 //     public static void main(String[] args) {
 //         Scanner sc =  new Scanner(System.in);
-      
+
 //         System.out.println(" enter your number ");
 //         int num = sc.nextInt();
 //        findoddeven(num);
@@ -1392,7 +1390,7 @@ System.out.println("Invalid month");
 //         obj.setroll(123);
 //        obj.Display();
 //     }
-    
+
 // }
 
 // class jdk{
@@ -1433,9 +1431,6 @@ System.out.println("Invalid month");
 //     }
 // }
 
-
-
-
 // class jdk{
 //     int age;
 //     String name;
@@ -1460,7 +1455,6 @@ System.out.println("Invalid month");
 //         obj1.Display();
 //     }
 // }
-
 
 // class jdk{
 //     int age;
@@ -1517,7 +1511,7 @@ System.out.println("Invalid month");
 //     public static void main(String[] args) {
 //         jdk obj = new jdk();
 //         obj.b();
-       
+
 //     }
 // }
 
@@ -1547,7 +1541,6 @@ System.out.println("Invalid month");
 //         jdk obj = new jdk();
 //     }
 // }
-
 
 // // real usage of this() 
 // class jdk{
@@ -1640,9 +1633,6 @@ System.out.println("Invalid month");
 //         }
 //     }
 
-
-
-
 // //multi level
 // class parent{
 //     int x =9;
@@ -1650,14 +1640,13 @@ System.out.println("Invalid month");
 //         System.out.println(" its vj class");
 //     }
 //     }
-    
-    
+
 //     class child extends parent{
 //     void Dis(){
 //         System.out.println(" its java ");
 //     }
 //     }
-    
+
 //     class child1 extends child{
 //     void Dis1(){
 //         System.out.println(" its java ");
@@ -1673,8 +1662,6 @@ System.out.println("Invalid month");
 //         }
 //     }
 
-
-
 // //hierachical
 // class parent{
 // int x =9;
@@ -1682,7 +1669,6 @@ System.out.println("Invalid month");
 //     System.out.println(" its vj class");
 // }
 // }
-
 
 // class child extends parent{
 // void Dis(){
@@ -1704,7 +1690,6 @@ System.out.println("Invalid month");
 //         System.out.println(obj.x);
 //     }
 // }
-
 
 // // Aggregation
 // class Operation{
@@ -1743,7 +1728,6 @@ System.out.println("Invalid month");
 
 //     }
 // }
-
 
 // class jdk{
 //     static int add(int x , int y){
@@ -1786,7 +1770,6 @@ System.out.println("Invalid month");
 //   }
 // }
 
-
 // class jdk{
 //     void sum(int x,int y){
 //         System.out.println("int arg method invoked");
@@ -1798,10 +1781,9 @@ System.out.println("Invalid month");
 //   public static void main(String[] args) {
 //     jdk obj = new jdk();
 //     obj.sum(10, 10);
-   
+
 //   }
 // }
-
 
 // class jdk{
 //     void sum(int x,int y){
@@ -1814,13 +1796,11 @@ System.out.println("Invalid month");
 //   public static void main(String[] args) {
 //     jdk obj = new jdk();
 //     obj.sum(10, 10);
-   
+
 //   }
 // }
 
-
 // overriding 
-
 
 // class jdk{
 //     void kl(){
@@ -1838,7 +1818,6 @@ System.out.println("Invalid month");
 //     }
 // }
 
-
 // class jdk{
 //     int  kl(){
 //        return 0;
@@ -1853,7 +1832,6 @@ System.out.println("Invalid month");
 //         System.out.println(obj.kl());
 //     }
 // }
-
 
 // class jdk{
 //     String name = "vj";
@@ -1878,7 +1856,7 @@ System.out.println("Invalid month");
 // }
 // class child extends jdk{
 //     child(){
-        
+
 //         System.out.println("its child construcotr");
 //     }
 //     public static void main(String[] args) {
@@ -1886,7 +1864,6 @@ System.out.println("Invalid month");
 
 //     }
 // }
-
 
 // class jdk{
 //     int x ;
@@ -1903,7 +1880,6 @@ System.out.println("Invalid month");
 //         jdk obj = new jdk();
 //     }
 // }
-
 
 // super with block 
 
@@ -1934,7 +1910,7 @@ System.out.println("Invalid month");
 // }
 
 // class child extends jdk{
-    
+
 //     public static void main(String[] args) {
 //         child obj = new child();
 //         obj.A();
@@ -1978,7 +1954,6 @@ System.out.println("Invalid month");
 //     }
 // }
 
-
 // // static binding and dynamic binding 
 // class Parent {    // Using meaningful class name instead of 'jdk'
 //     void display() {    // Using meaningful method name instead of 'abc'
@@ -1998,9 +1973,6 @@ System.out.println("Invalid month");
 //     }
 // }
 
-
-
-
 // class jkl{
 //     public static void main(String[] args) {
 //         jkl obj =  null;
@@ -2012,168 +1984,288 @@ class JKL {
 }
 
 // class Child extends JKL {
-//     static void method(JKL j) {
-//         if(j instanceof Child) {
-//             Child c = (Child)j;  // downcasting
-//             System.out.println("Downcasting performed");
-//         } else {
-//             System.out.println("Cannot perform downcasting");
-//         }
-//     }
-    
-//     public static void main(String[] args) {
-//         // Create child class instance to demonstrate downcasting
-//         // JKL j = new Child();  // Use child instance instead of parent
-//         // Child.method(j);
-        
-//         // // This will not allow downcasting
-//         // JKL j2 = new JKL();
-//         // Child.method(j2);
-//     }
+// static void method(JKL j) {
+// if(j instanceof Child) {
+// Child c = (Child)j; // downcasting
+// System.out.println("Downcasting performed");
+// } else {
+// System.out.println("Cannot perform downcasting");
+// }
 // }
 
+// public static void main(String[] args) {
+// // Create child class instance to demonstrate downcasting
+// // JKL j = new Child(); // Use child instance instead of parent
+// // Child.method(j);
+
+// // // This will not allow downcasting
+// // JKL j2 = new JKL();
+// // Child.method(j2);
+// }
+// }
 
 // class jkl{
 
 // }
 
 // class child extends jkl{
-//     static void method(jkl j){
-//         child c = (child)j;
-//         System.out.println("downcasting performed");
-//     }
-//     public static void main(String[] args) {
-//         jkl j = new child();
-//         child.method(j);
-//     }
+// static void method(jkl j){
+// child c = (child)j;
+// System.out.println("downcasting performed");
+// }
+// public static void main(String[] args) {
+// jkl j = new child();
+// child.method(j);
+// }
 // }
 
-//abstractions
+// abstractions
 
 // abstract class cls{
-//    abstract void method();
+// abstract void method();
 // }
 // class child extends cls{
-//     void method(){
-//         System.out.println(" compile...");
-//     }
-//     public static void main(String[] args) {
-//         cls obj = new child();
-//         obj.method();
-//     }
+// void method(){
+// System.out.println(" compile...");
+// }
+// public static void main(String[] args) {
+// cls obj = new child();
+// obj.method();
+// }
 // }
 
 // abstract class Bank{
-//     abstract int getrateIntrest();
+// abstract int getrateIntrest();
 // }
 // class union extends Bank{
-//     int getrateIntrest(){
-//         return 11;
-//     }
+// int getrateIntrest(){
+// return 11;
+// }
 // }
 // class Sbi extends Bank{
-//     int getrateIntrest(){
-//         return 7;
-//     }
+// int getrateIntrest(){
+// return 7;
+// }
 // }
 
 // class jk{
-//     public static void main(String[] args) {
-//         Bank obj;
+// public static void main(String[] args) {
+// Bank obj;
 
-//         obj = new union();
-//         System.out.println("intrest is " + obj.getrateIntrest() + "%");
+// obj = new union();
+// System.out.println("intrest is " + obj.getrateIntrest() + "%");
 
-//         obj = new Sbi();
-//         System.out.println("intrest is " + obj.getrateIntrest() + "%");
-//     }
+// obj = new Sbi();
+// System.out.println("intrest is " + obj.getrateIntrest() + "%");
+// }
 // }
 
-
 // interface A{
-//     void a();
-//     void b();
-//     void c();
-//     void d();
+// void a();
+// void b();
+// void c();
+// void d();
 // }
 
 // abstract class B implements A{
-//     public void c(){
-//         System.out.println(" its c");
-//     }
+// public void c(){
+// System.out.println(" its c");
+// }
 // }
 
 // class Z extends B{
 
-//     public void b(){
-//         System.out.println(" its b ");
-//     }
-//     public void a(){
-//         System.out.println(" its a ");
-//     }
-//     public void d(){
-//         System.out.println(" its d ");
-//     }
+// public void b(){
+// System.out.println(" its b ");
+// }
+// public void a(){
+// System.out.println(" its a ");
+// }
+// public void d(){
+// System.out.println(" its d ");
+// }
 // }
 // class al{
-//     public static void main(String[] args) {
-//         A obj  = new Z();
-//         obj.a();
-//         obj.b();
-//         obj.c();
-//         obj.d();
-//     }
+// public static void main(String[] args) {
+// A obj = new Z();
+// obj.a();
+// obj.b();
+// obj.c();
+// obj.d();
+// }
 // }
 
 // interface kl{
-//     void method();
+// void method();
 // }
 
 // interface klm{
-//     void method1();
+// void method1();
 // }
 
 // class child implements kl,klm{
-//    public void method(){
-//         System.out.println(" hello world ");
-//     }
-//     public void method1(){
-//         System.out.println(" hey vj ");
-//     }
+// public void method(){
+// System.out.println(" hello world ");
+// }
+// public void method1(){
+// System.out.println(" hey vj ");
+// }
 // public static void main(String[] args) {
-//     child obj =  new child();
-//     obj.method();
-//     obj.method1();
+// child obj = new child();
+// obj.method();
+// obj.method1();
 // }
 // }
 
 // class Non {
-//     // Interface converted to class
-//     private int sqr(int x) {
-//         return x * x;
-//     }
-    
-//     public void A() {
-//         System.out.println("Parent class");
-//     }
+// // Interface converted to class
+// private int sqr(int x) {
+// return x * x;
 // }
 
-// class Rectangle extends Non {  // Changed implements to extends
-    
-//     public void A() {
-//         System.out.println("its vj class");
-//     }
+// public void A() {
+// System.out.println("Parent class");
+// }
+// }
+
+// class Rectangle extends Non { // Changed implements to extends
+
+// public void A() {
+// System.out.println("its vj class");
+// }
 // }
 
 // class Dk {
+// public static void main(String[] args) {
+// Non obj = new Rectangle();
+// obj.A();
+// // This won't work because sqr is private:
+// // System.out.println(obj.sqr(3));
+
+// // To access private method, we need to make it accessible through a public
+// method
+// Rectangle rect = new Rectangle();
+// rect.A();
+// }
+// }
+
+// class kl{
+// private int x =2;
+// private void ad(){
+// System.out.println(" its vj class ");
+// }
+
+// }
+
+// class mn{
+// public static void main(String[] args) {
+// kl obj = new kl();
+// obj.ad();
+// System.out.println(obj.x);
+// }
+// }
+
+// class mn{
+// private mn(){}
+// void method(){
+// System.out.println(" its vj class ");
+// }
+// }
+// class nm{
+// public static void main(String[] args) {
+// mn obj = new mn();
+// }
+// }
+
+// class kl{
+// private String name;
+// String getname(){
+// return name;
+// }
+// void setname(String name){
+// this.name = name;
+// }
+// }
+// class nm{
+// public static void main(String[] args) {
+// kl obj = new kl();
+// obj.setname("vijendra sharma");
+// System.out.println(obj.getname());
+// }
+// }
+
+// -- Array --
+// class kl {
+// public static void main(String[] args) {
+// int x[] = {1,2,3,4,5,6,7};
+// for(int i:x){
+// System.out.println(i);
+// }
+
+// for(int i=0;i<x.length;i++){
+// System.out.println(x[i]);
+// }
+
+// int x[] = new int[5];
+// x[0] =8;
+// x[1] = 7;
+// x[2] = 6;
+// x[3] =8;
+// x[4] = 7;
+// x[2] = 6;
+// for(int i=0;i<x.length;i++){
+// System.out.println(x[i]);
+// }
+
+// }
+// }
+
+// class kl {
+// static void max(int arr[]) {
+// int max = arr[0];
+// for (int i = 0; i < arr.length; i++) {
+// if(max>arr[i]){
+// max = arr[i];
+// }
+// }
+// System.out.println(max);
+
+// }
+// public static void main(String[] args) {
+// int x[] = {1,2,3,4,5,6,7};
+// max(x);
+// }
+// }
+
+// class anonymous{
+// static void vj(int arr[]){
+// for(int i=0;i<arr.length;i++){
+// System.out.println(arr[i]);
+// }
+// }
+
+// public static void main(String[] args) {
+// vj(new int[]{1,2,3,4,5,6,7,8}); // anonymous array
+// }
+// }
+
+// class returnarr{
+// static int[] method(){
+// return new int[]{1,42,3,1};
+// }
+// public static void main(String[] args) {
+// int arr[] = method();
+// for(int i=0;i<arr.length;i++){
+// System.out.println(arr[i]);
+// }
+// }
+// }
+
+// class kl {
 //     public static void main(String[] args) {
-//         Non obj = new Rectangle();
-//         obj.A();
-//         // This won't work because sqr is private:
-//         // System.out.println(obj.sqr(3));  
-        
-//         // To access private method, we need to make it accessible through a public method
-//         Rectangle rect = new Rectangle();
-//         rect.A();
+//         int x[] = { 1, 2, 3, 3, 45, 6, 8 };
+//         for (int i = 0; i <= x.length; i++) {
+//             System.out.println(x[i]);
+//         }
 //     }
 // }
