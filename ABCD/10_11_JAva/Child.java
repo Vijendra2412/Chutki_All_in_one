@@ -1979,6 +1979,9 @@ System.out.println("Invalid month");
 //         System.out.println(obj instanceof jkl);
 //     }
 // }
+
+import java.util.Arrays;
+
 class JKL {
     // parent class
 }
@@ -2269,3 +2272,87 @@ class JKL {
 //         }
 //     }
 // }
+
+// class scndlarg{
+//     public static void main(String[] args) {
+//         int arr[] = {3,1,2,5,6,78,4};
+//         int first = Integer.MIN_VALUE,second = Integer.MIN_VALUE;
+//         for(int i=0;i<arr.length;i++){
+//             if(arr[i]>first){
+//                 second =first;
+//                 first = arr[i];
+//             }
+//             else if (arr[i] > second && arr[i] !=first){
+//                 second  = arr[i];
+//             }
+//         }
+//         System.out.println(" second largest number :- " + second);
+//     }
+// }
+
+class Questions{
+    public static void main(String[] args) {
+        // int arr[] = {3,1,2,5,6,78,4};
+       
+       //---------Reverse----------------
+        // for(int i=0;i<arr.length/2;i++){
+        //     int temp = arr[i];
+        //     arr[i]  = arr[arr.length-1-i];
+        //     arr[arr.length-1-i] = temp;
+        // }
+        // System.out.println(Arrays.toString(arr));
+
+        //--------------------------
+        // System.out.println(" original array:- ");
+        // for( int i :arr){
+        //     System.out.print(i+ " ");
+        // }
+
+        // int reverse[] = new int[arr.length];
+        // for(int i=0;i<arr.length;i++){
+        //     reverse[i] = arr[arr.length-1-i];
+        // }
+
+        // System.out.println("\n reversed arrry ");
+        // for(int i : reverse){
+        //     System.out.print(i+" ");
+        // }
+
+        //----check sorted or not---
+        // boolean issorted = true;
+        // for(int i=0;i<arr.length;i++){
+        //     if(arr[i]>arr[i+1]){
+        //         issorted = false;
+        //         break;
+        //     }
+        // }
+        // System.out.println(issorted);
+
+        // check frequency
+
+        int arr[]  = {1,2,3,2,4,3,4};
+
+        System.out.println("Element | Frequency ");
+        for(int i =0;i<arr.length;i++){
+
+            int count = 1;
+            boolean iscounted = false;
+
+            for(int j=0; j<i;j++){
+                if(arr[i] == arr[j]){
+                    iscounted = true;
+                    break;
+                }
+            }
+            if(!iscounted){
+                for(int k=i+1;k<arr.length;k++){
+                    if(arr[i] == arr[k]){
+                        count++;
+                    }
+                }
+                System.out.println(" " + arr[i] + " | " + count);
+            }
+        }
+
+    }
+}
