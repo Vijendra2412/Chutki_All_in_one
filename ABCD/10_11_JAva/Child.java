@@ -2290,8 +2290,8 @@ class JKL {
 //     }
 // }
 
-class Questions{
-    public static void main(String[] args) {
+// class Questions{
+//     public static void main(String[] args) {
         // int arr[] = {3,1,2,5,6,78,4};
        
        //---------Reverse----------------
@@ -2330,29 +2330,94 @@ class Questions{
 
         // check frequency
 
-        int arr[]  = {1,2,3,2,4,3,4};
+//         int arr[]  = {1,2,3,2,4,3,4};
 
-        System.out.println("Element | Frequency ");
-        for(int i =0;i<arr.length;i++){
+//         System.out.println("Element | Frequency ");
+//         for(int i =0;i<arr.length;i++){
 
-            int count = 1;
-            boolean iscounted = false;
+//             int count = 1;
+//             boolean iscounted = false;
 
-            for(int j=0; j<i;j++){
-                if(arr[i] == arr[j]){
-                    iscounted = true;
-                    break;
-                }
+//             for(int j=0; j<i;j++){
+//                 if(arr[i] == arr[j]){
+//                     iscounted = true;
+//                     break;
+//                 }
+//             }
+//             if(!iscounted){
+//                 for(int k=i+1;k<arr.length;k++){
+//                     if(arr[i] == arr[k]){
+//                         count++;
+//                     }
+//                 }
+//                 System.out.println(" " + arr[i] + " | " + count);
+//             }
+//         }
+
+//     }
+// }
+
+
+
+class milti2d{
+    public static void main(String[] args) {
+        // int [][] x = {
+        //     {1,2,3},
+        //     {4,5}
+        // };
+        // for(int i=0;i<x.length;i++){
+        //     for(int j = 0;j<x[i].length;j++){
+        //         System.out.println(x[i][j]);
+        //     }
+
+        // }
+
+        // int x[][]  = new int[2][2];
+        // x[0][0] = 1;
+        // x[0][1] = 2;
+        // x[1][0] = 3;
+        // x[1][1] = 2;
+        // for(int i=0;i<x.length;i++){
+        //     for(int j = 0;j<x[i].length;j++){
+        //         System.out.println(x[i][j]);
+        //     }
+        // }
+
+        // int x[][] = {
+        //     {1,2,3},
+        //     {4,5,6},
+        //     {7,8,9}
+        // };
+        // for(int i = 0;i<3;i++){
+        //     for(int j =0;j<3;j++){
+        //         System.out.print(x[i][j] +" ");
+        //     }
+        //     System.out.println();
+        // }
+
+        // jagged Array 
+         int x[][] = new int[3][];
+         x[0]= new int[3];
+         x[1] = new int[5];
+         x[2] = new int [2];
+
+         int y = 0;
+         for(int i =0;i<x.length;i++){
+            for(int j=0;j<x[i].length;j++){
+                x[i][j] = y++;
+                
             }
-            if(!iscounted){
-                for(int k=i+1;k<arr.length;k++){
-                    if(arr[i] == arr[k]){
-                        count++;
-                    }
-                }
-                System.out.println(" " + arr[i] + " | " + count);
+         }
+
+         for(int i = 0;i<x.length;i++){
+            for(int j=0;j<x[i].length;j++){
+                System.out.print(x[i][j] + " ");
             }
-        }
+            System.out.println();
+         }
+
+
+
 
     }
 }
