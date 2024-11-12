@@ -1981,6 +1981,7 @@ System.out.println("Invalid month");
 // }
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 class JKL {
     // parent class
@@ -2359,8 +2360,8 @@ class JKL {
 
 
 
-class milti2d{
-    public static void main(String[] args) {
+// class milti2d{
+//     public static void main(String[] args) {
         // int [][] x = {
         //     {1,2,3},
         //     {4,5}
@@ -2396,28 +2397,92 @@ class milti2d{
         // }
 
         // jagged Array 
-         int x[][] = new int[3][];
-         x[0]= new int[3];
-         x[1] = new int[5];
-         x[2] = new int [2];
+        //  int x[][] = new int[3][];
+        //  x[0]= new int[3];
+        //  x[1] = new int[5];
+        //  x[2] = new int [2];
 
-         int y = 0;
-         for(int i =0;i<x.length;i++){
-            for(int j=0;j<x[i].length;j++){
-                x[i][j] = y++;
+        //  int y = 0;
+        //  for(int i =0;i<x.length;i++){
+        //     for(int j=0;j<x[i].length;j++){
+        //         x[i][j] = y++;
                 
-            }
-         }
+        //     }
+        //  }
 
-         for(int i = 0;i<x.length;i++){
-            for(int j=0;j<x[i].length;j++){
-                System.out.print(x[i][j] + " ");
-            }
-            System.out.println();
-         }
-
-
+        //  for(int i = 0;i<x.length;i++){
+        //     for(int j=0;j<x[i].length;j++){
+        //         System.out.print(x[i][j] + " ");
+        //     }
+        //     System.out.println();
+        //  }
 
 
-    }
-}
+
+
+//     }
+// }
+
+
+
+// class copy{
+//     public static void main(String[] args) {
+//         int x[] = {1,2,3,4,5,6};
+//         int y[] = new int[x.length];
+
+//         System.out.println(" original array:- ");
+//         for(int i =0;i<x.length;i++){
+//             System.out.print(x[i]);
+//         }
+
+//         for(int i=0;i<x.length;i++){
+//             y[i ]= x[i];
+//         }
+//         System.out.println("\n copy array:- ");
+//         for(int i:y){
+//             System.out.print(i);
+//         }
+//     }
+// }
+
+
+// class frequency{
+//     public static void main(String[] args) {
+//         int []arr = {1,2,3,1,3,4,5};
+//         int []freq = new int[arr.length];
+
+//         for(int i=0;i<arr.length;i++){
+//             int count = 1;
+//             if(freq[i] == -1){
+//                 continue;
+//             }
+//             for(int j=i+1;j<arr.length;j++){
+//                 if(arr[i]==arr[j]){
+//                     count++;
+//                     freq[j] = -1;
+//                 }
+//             }
+//             freq[i] = count;
+//         }
+//         System.out.println("Element: Frequncy");
+//         for(int i=0; i<arr.length;i++){
+//             if(freq[i]!=-1){
+//                 System.out.println(arr[i]+ ":"+ freq[i]);
+//             }
+//         } 
+//     }
+// }
+
+
+
+// class reverse{
+//     public static void main(String[] args) {
+//         int[] arr = {1,2,3,4,5,6};
+//         System.out.println(" reverse array");
+//         for(int i=arr.length-1;i>=0;i--){
+//             System.out.print(arr[i]+" ");
+//         }
+//     }
+// }
+
+
