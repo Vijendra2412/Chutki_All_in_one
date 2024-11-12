@@ -2486,3 +2486,516 @@ class JKL {
 // }
 
 
+/*
+ --------- Solutions -----------
+ public class TransposeMatrixAlt {
+    public static void main(String[] args) {
+        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int[][] transpose = new int[matrix[0].length][matrix.length];
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                transpose[j][i] = matrix[i][j];
+            }
+        }
+
+        System.out.println("Transpose of the matrix:");
+        for (int[] row : transpose) {
+            for (int element : row) {
+                System.out.print(element + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+public class SumRowColumn {
+    public static void main(String[] args) {
+        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int rowSum, colSum;
+
+        System.out.println("Sum of each row:");
+        for (int i = 0; i < matrix.length; i++) {
+            rowSum = 0;
+            for (int j = 0; j < matrix[i].length; j++) {
+                rowSum += matrix[i][j];
+            }
+            System.out.println("Row " + (i + 1) + ": " + rowSum);
+        }
+
+        System.out.println("Sum of each column:");
+        for (int i = 0; i < matrix[0].length; i++) {
+            colSum = 0;
+            for (int j = 0; j < matrix.length; j++) {
+                colSum += matrix[j][i];
+            }
+            System.out.println("Column " + (i + 1) + ": " + colSum);
+        }
+    }
+}
+
+public class MatrixProduct {
+    public static void main(String[] args) {
+        int[][] a = {{1, 2}, {3, 4}};
+        int[][] b = {{2, 0}, {1, 2}};
+        int[][] product = new int[2][2];
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                for (int k = 0; k < 2; k++) {
+                    product[i][j] += a[i][k] * b[k][j];
+                }
+            }
+        }
+
+        System.out.println("Product of matrices:");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(product[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+public class FrequencyOddEvenMatrix {
+    public static void main(String[] args) {
+        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int oddCount = 0, evenCount = 0;
+
+        for (int[] row : matrix) {
+            for (int element : row) {
+                if (element % 2 == 0) {
+                    evenCount++;
+                } else {
+                    oddCount++;
+                }
+            }
+        }
+
+        System.out.println("Odd numbers count: " + oddCount);
+        System.out.println("Even numbers count: " + evenCount);
+    }
+}
+
+public class UpperTriangular {
+    public static void main(String[] args) {
+        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+        System.out.println("Upper triangular matrix:");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (i <= j) {
+                    System.out.print(matrix[i][j] + " ");
+                } else {
+                    System.out.print("0 ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+public class LowerTriangular {
+    public static void main(String[] args) {
+        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+        System.out.println("Lower triangular matrix:");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (i >= j) {
+                    System.out.print(matrix[i][j] + " ");
+                } else {
+                    System.out.print("0 ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+public class EqualMatrices {
+    public static void main(String[] args) {
+        int[][] a = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int[][] b = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        boolean isEqual = true;
+
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                if (a[i][j] != b[i][j]) {
+                    isEqual = false;
+                    break;
+                }
+            }
+        }
+
+        if (isEqual) {
+            System.out.println("The matrices are equal.");
+        } else {
+            System.out.println("The matrices are not equal.");
+        }
+    }
+}
+
+public class SparseMatrix {
+    public static void main(String[] args) {
+        int[][] matrix = {{0, 0, 3}, {0, 0, 0}, {0, 0, 0}};
+        int zeroCount = 0;
+
+        for (int[] row : matrix) {
+            for (int element : row) {
+                if (element == 0) {
+                    zeroCount++;
+                }
+            }
+        }
+
+        if (zeroCount > (matrix.length * matrix[0].length) / 2) {
+            System.out.println("The matrix is a sparse matrix.");
+        } else {
+            System.out.println("The matrix is not a sparse matrix.");
+        }
+    }
+}
+
+public class IdentityMatrix {
+    public static void main(String[] args) {
+        int[][] matrix = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
+        boolean isIdentity = true;
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if ((i == j && matrix[i][j] != 1) || (i != j && matrix[i][j] != 0)) {
+                    isIdentity = false;
+                    break;
+                }
+            }
+        }
+
+        if (isIdentity) {
+            System.out.println("The matrix is an identity matrix.");
+        } else {
+            System.out.println("The matrix is not an identity matrix.");
+        }
+    }
+}
+
+public class SubtractMatrices {
+    public static void main(String[] args) {
+        int[][] a = {{5, 6}, {7, 8}};
+        int[][] b = {{1, 2}, {3, 4}};
+        int[][] difference = new int[2][2];
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                difference[i][j] = a[i][j] - b[i][j];
+            }
+        }
+
+        System.out.println("Difference of matrices:");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(difference[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+public class TransposeMatrix {
+    public static void main(String[] args) {
+        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int[][] transpose = new int[3][3];
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                transpose[i][j] = matrix[j][i];
+            }
+        }
+
+        System.out.println("Transpose of the matrix:");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(transpose[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+public class OddEvenNumbers {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5, 6};
+
+        System.out.println("Even numbers:");
+        for (int i : arr) {
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+
+        System.out.println("\nOdd numbers:");
+        for (int i : arr) {
+            if (i % 2 != 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+
+public class MultiplyMatrices {
+    public static void main(String[] args) {
+        int[][] a = {{1, 2}, {3, 4}};
+        int[][] b = {{5, 6}, {7, 8}};
+        int[][] product = new int[2][2];
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                for (int k = 0; k < 2; k++) {
+                    product[i][j] += a[i][k] * b[k][j];
+                }
+            }
+        }
+
+        System.out.println("Product of matrices:");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(product[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+public class AddMatrices {
+    public static void main(String[] args) {
+        int[][] a = {{1, 2}, {3, 4}};
+        int[][] b = {{5, 6}, {7, 8}};
+        int[][] sum = new int[2][2];
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                sum[i][j] = a[i][j] + b[i][j];
+            }
+        }
+
+        System.out.println("Sum of matrices:");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(sum[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+import java.util.Arrays;
+
+public class RemoveDuplicates {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 2, 3, 4, 4, 5};
+        int n = arr.length;
+
+        Arrays.sort(arr);
+
+        int[] temp = new int[n];
+        int j = 0;
+
+        for (int i = 0; i < n - 1; i++) {
+            if (arr[i] != arr[i + 1]) {
+                temp[j++] = arr[i];
+            }
+        }
+        temp[j++] = arr[n - 1];
+
+        System.out.println("Array after removing duplicates:");
+        for (int i = 0; i < j; i++) {
+            System.out.print(temp[i] + " ");
+        }
+    }
+}
+
+import java.util.Arrays;
+
+public class SmallestNumber {
+    public static void main(String[] args) {
+        int[] arr = {5, 2, 8, 7, 1};
+        
+        Arrays.sort(arr);
+        
+        System.out.println("Smallest element is: " + arr[0]);
+    }
+}
+
+import java.util.Arrays;
+
+public class SecondSmallest {
+    public static void main(String[] args) {
+        int[] arr = {5, 2, 8, 7, 1};
+        
+        Arrays.sort(arr);
+        
+        System.out.println("2nd smallest element is: " + arr[1]);
+    }
+}
+
+import java.util.Arrays;
+
+public class LargestNumber {
+    public static void main(String[] args) {
+        int[] arr = {5, 2, 8, 7, 1};
+        
+        Arrays.sort(arr);
+        
+        System.out.println("Largest element is: " + arr[arr.length - 1]);
+    }
+}
+
+import java.util.Arrays;
+
+public class SecondLargest {
+    public static void main(String[] args) {
+        int[] arr = {5, 2, 8, 7, 1};
+        
+        Arrays.sort(arr);
+        
+        System.out.println("2nd largest element is: " + arr[arr.length - 2]);
+    }
+}
+
+import java.util.Arrays;
+
+public class ThirdLargest {
+    public static void main(String[] args) {
+        int[] arr = {5, 2, 8, 7, 1};
+        
+        Arrays.sort(arr);
+        
+        System.out.println("3rd largest element is: " + arr[arr.length - 3]);
+    }
+}
+
+import java.util.Arrays;
+import java.util.Collections;
+
+public class DescendingOrder {
+    public static void main(String[] args) {
+        Integer[] arr = {5, 2, 8, 7, 1};
+
+        Arrays.sort(arr, Collections.reverseOrder());
+
+        System.out.println("Array in descending order:");
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+    }
+}
+
+import java.util.Arrays;
+
+public class AscendingOrder {
+    public static void main(String[] args) {
+        int[] arr = {5, 2, 8, 7, 1};
+
+        Arrays.sort(arr);
+
+        System.out.println("Array in ascending order:");
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+    }
+}
+
+public class RightRotateArray {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int n = 1; // Number of times to rotate
+
+        for (int i = 0; i < n; i++) {
+            int last = arr[arr.length - 1];
+            for (int j = arr.length - 1; j > 0; j--) {
+                arr[j] = arr[j - 1];
+            }
+            arr[0] = last;
+        }
+
+        System.out.println("Right Rotated Array:");
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+    }
+}
+
+public class SumOfArray {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int sum = 0;
+        
+        for (int i : arr) {
+            sum += i;
+        }
+        
+        System.out.println("Sum of all elements in the array: " + sum);
+    }
+}
+
+public class ArrayLength {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        
+        System.out.println("Number of elements in the array: " + arr.length);
+    }
+}
+
+
+public class SmallestElement {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5, 6};
+        int min = arr[0];
+        
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        
+        System.out.println("Smallest element in the array: " + min);
+    }
+}
+
+public class LargestElement {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5, 6};
+        int max = arr[0];
+        
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        
+        System.out.println("Largest element in the array: " + max);
+    }
+}
+
+public class OddPositionElements {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5, 6};
+        
+        System.out.println("Elements at odd positions:");
+        for (int i = 0; i < arr.length; i += 2) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+ */
