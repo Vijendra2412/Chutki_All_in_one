@@ -2990,6 +2990,9 @@ public class OddPositionElements {
     }
 }
 
+// String
+
+
 
 
 
@@ -2999,3 +3002,69 @@ public class OddPositionElements {
 
 
  */
+
+ class kl{
+    public static void main(String[] args) {
+        // 
+        // String x = "Vijendra";
+        // x= x.concat(" Sharma");
+        // System.out.println(x);
+        // System.out.println(x.concat(" Sharma"));
+
+        // equals()
+        // ==
+        // CompareTo()
+
+        // String x = "vj";
+        // String y = "vj";
+        // String a = new String("vj");
+        // String b = "vijay";
+        // String c ="VJ";
+
+        // System.out.println(x.equals(y));
+        // System.out.println(x.equals(b));
+        // System.out.println(x.equals(c));
+        // System.out.println(x.equalsIgnoreCase(c));
+
+        // System.out.println(x==y);
+
+        //compareto 
+        // ==  0
+        // x>y  1
+        // x<y  -1
+
+        // System.out.println(x.compareTo(y));
+        // System.out.println(x.compareTo(a));
+        // System.out.println(x.compareTo(b));
+        // System.out.println(x.compareTo(c));
+
+
+        // String x = "vj";
+        // String y = "Sharma";
+        // int age = 18;
+        // System.out.println(x.concat(y));
+        // System.out.println(x.concat(age));
+
+        // System.out.println( x + age);
+
+            String fname = "vijendra";
+            String lname = "Sharma";
+            // StringBuffer sb = new StringBuffer();
+            // sb.append(" hey ");
+            // sb.append(fname);
+            // sb.append(lname);
+            // String result = sb.toString();
+            // System.out.println(result);
+
+            // String result = String.join(" ","hello", fname,lname);
+            // System.out.println(result);
+
+            // String result = String.format("heloo , %s ",fname,lname);
+            // System.out.println(result);
+
+ 
+
+
+        
+    }
+ }
