@@ -3003,8 +3003,8 @@ public class OddPositionElements {
 
  */
 
- class kl{
-    public static void main(String[] args) {
+//  class kl{
+//     public static void main(String[] args) {
         // 
         // String x = "Vijendra";
         // x= x.concat(" Sharma");
@@ -3047,8 +3047,8 @@ public class OddPositionElements {
 
         // System.out.println( x + age);
 
-            String fname = "vijendra";
-            String lname = "Sharma";
+            // String fname = "vijendra";
+            // String lname = "Sharma";
             // StringBuffer sb = new StringBuffer();
             // sb.append(" hey ");
             // sb.append(fname);
@@ -3066,5 +3066,94 @@ public class OddPositionElements {
 
 
         
-    }
- }
+//     }
+//  }
+
+
+// class kl{
+//     public static void main(String[] args) {
+        // String x = "vijendra sharma ";
+        // System.out.println(x.substring(0,5));
+
+        // String x = new String("its, vj class");
+        // String [] arr = x.split(" ");
+        // System.out.println(Arrays.toString(arr));
+
+
+        // String x = "vijendra sharma";
+        // System.out.println(x.toUpperCase());
+        // System.out.println(x.toLowerCase());
+        // System.out.println(x);
+        // System.out.println(x);
+        // System.out.println(x.trim());
+
+        // System.out.println(x.startsWith("v"));
+        // System.out.println(x.endsWith("a"));
+
+        // System.out.println(x.charAt(5));
+
+        // String x = new String();
+        // String x2 = x.intern();
+        // System.out.println(x2);
+
+        // int x = 10;
+        // String a = String.valueOf(x);
+        // System.out.println(a);
+        // System.out.println(a+12);
+
+        // String x = " its java class ";
+        // String re = x.replace("java", "vj");
+        // System.out.println(x);
+        // System.out.println(re);
+
+        // StringBuffer x = new StringBuffer();
+        // x.insert(0, "hello");
+        // x.insert(1, " ");
+        // x.insert(2, "vj");
+        // System.out.println(x);
+
+        // StringBuffer x = new StringBuffer("hey!");
+        // x.replace(1, 4, "vijendra");
+        // System.out.println(x);
+        
+//     }
+// }
+
+// class kl{
+//     private static kl singleobject;
+
+//     private kl(){
+
+//     }
+
+//     public static kl getInstance(){
+
+//     }
+// }
+
+enum size{
+        SMALL ,MEDIUM ,LARGE , EXTRALARGE;
+
+
+        public String getSize(){
+            switch (this) {
+                case SMALL:
+                return "small";
+
+                case MEDIUM:
+                return "medium";
+                    
+                default:
+                return null;
+              
+            
+               
+            }
+        }
+        public static void main(String[] args) {
+            System.out.println(size.SMALL.getSize());
+        }
+}
+
+
+
