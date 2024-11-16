@@ -1723,98 +1723,291 @@ import java.util.Arrays;
 //        }
 //    }
 
-class Quick {
-    // Partition function divides the array around a pivot
-    public static int partition(int[] arr, int low, int high) {
-        // Choose the rightmost element as pivot
-        int pivot = arr[high];
+// class Quick {
+//     // Partition function divides the array around a pivot
+//     public static int partition(int[] arr, int low, int high) {
+//         // Choose the rightmost element as pivot
+//         int pivot = arr[high];
         
-        // i keeps track of the boundary between elements smaller and larger than pivot
-        // Initially set to one position before the start
-        int i = low - 1;
+//         // i keeps track of the boundary between elements smaller and larger than pivot
+//         // Initially set to one position before the start
+//         int i = low - 1;
         
-        // Iterate through all elements except the pivot
-        for(int j = low; j < high; j++) {
-            // If current element is smaller than or equal to pivot
-            if(arr[j] <= pivot) {
-                // Move boundary forward
-                i++;
+//         // Iterate through all elements except the pivot
+//         for(int j = low; j < high; j++) {
+//             // If current element is smaller than or equal to pivot
+//             if(arr[j] <= pivot) {
+//                 // Move boundary forward
+//                 i++;
                 
-                // Swap current element with element at boundary
-                // This puts smaller element on left side
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+//                 // Swap current element with element at boundary
+//                 // This puts smaller element on left side
+//                 int temp = arr[i];
+//                 arr[i] = arr[j];
+//                 arr[j] = temp;
                 
-                /* Example of swapping:
-                   If array is [4,2,1,5,3] and pivot is 3
-                   First iteration (j=0): i=-1, j=0, 4>3, no swap
-                   Second iteration (j=1): i=-1, j=1, 2<3, i++, swap, array becomes [2,4,1,5,3]
-                   Third iteration (j=2): i=0, j=2, 1<3, i++, swap, array becomes [2,1,4,5,3]
-                   Fourth iteration (j=3): i=1, j=3, 5>3, no swap
-                */
+//                 /* Example of swapping:
+//                    If array is [4,2,1,5,3] and pivot is 3
+//                    First iteration (j=0): i=-1, j=0, 4>3, no swap
+//                    Second iteration (j=1): i=-1, j=1, 2<3, i++, swap, array becomes [2,4,1,5,3]
+//                    Third iteration (j=2): i=0, j=2, 1<3, i++, swap, array becomes [2,1,4,5,3]
+//                    Fourth iteration (j=3): i=1, j=3, 5>3, no swap
+//                 */
+//             }
+//         }
+        
+//         // Finally, place pivot in its correct position
+//         // All elements before this position are smaller than pivot
+//         // All elements after this position are larger than pivot
+//         int temp = arr[i + 1];
+//         arr[i + 1] = arr[high];
+//         arr[high] = temp;
+        
+//         // Return the position of pivot
+//         return i + 1;
+//     }
+    
+//     // Main quicksort function implementing divide-and-conquer
+//     public static void quicksort(int[] arr, int low, int high) {
+//         // Base case: if low >= high, array has 0 or 1 element (already sorted)
+//         if(low < high) {
+//             /* Example: arr = [3,4,2,5,1,3,5], low = 0, high = 6
+//                First partition might result in:
+//                [2,1,3,4,5,3,5] with pivotIndex = 2
+//                Now array is divided into [2,1] and 
+//             */
+            
+//             // Get pivot's position after partitioning
+//             int pivotIndex = partition(arr, low, high);
+            
+//             // Recursively sort elements before pivot
+//             quicksort(arr, low, pivotIndex - 1);
+            
+//             // Recursively sort elements after pivot
+//             quicksort(arr, pivotIndex + 1, high);
+//         }
+//     }
+    
+//     public static void main(String[] args) {
+//         // Initialize test array
+//         int[] arr = {3, 4, 2, 5, 1, 3, 5};
+        
+//         // Print original array
+//         System.out.println("Array before sorting: ");
+//         for(int i : arr) {
+//             System.out.print(i + " ");
+//         }
+        
+//         // Call quicksort with initial parameters
+//         // low = 0 (start of array)
+//         // high = arr.length-1 (end of array)
+//         quicksort(arr, 0, arr.length - 1);
+        
+//         // Print sorted array
+//         System.out.println("\nArray after sorting:");
+//         for(int i : arr) {
+//             System.out.print(i + " ");
+//         }
+        
+//         /* Execution flow example:
+//            Initial array: [3,4,2,5,1,3,5]
+//            After first partition: [2,1,3,4,5,3,5]
+//            Left subarray: [2,1]
+//            Right subarray: [4,5,3,5]
+//            Final sorted array: [1,2,3,3,4,5,5]
+//         */
+//     }
+// }
+
+
+/* 
+import java.util.Arrays;
+
+class index {
+    // Main recursive method for merge sort
+    public static void mergesort(int[] arr) {
+        // Base case: if array has less than 2 elements, it's already sorted
+        if (arr.length < 2) {
+            return;
+        }
+
+        // Find the middle point to divide array into two halves
+        int mid = arr.length / 2;
+        
+        // Create left and right subarrays
+        // copyOfRange copies from first index (inclusive) to second index (exclusive)
+        int[] left = Arrays.copyOfRange(arr, 0, mid);      // First half of array
+        int[] right = Arrays.copyOfRange(arr, mid, arr.length);  // Second half of array
+
+        // Recursively sort the two halves
+        mergesort(left);   // Sort the left subarray
+        mergesort(right);  // Sort the right subarray
+
+        // Merge the sorted halves
+        merge(arr, left, right);
+    }
+
+    // Merge method to combine two sorted arrays into one sorted array
+    public static void merge(int[] arr, int[] left, int[] right) {
+        // Initialize pointers for left array (i), right array (j), and main array (k)
+        int i = 0;  // Index for left array
+        int j = 0;  // Index for right array
+        int k = 0;  // Index for merged array
+        
+        // Compare elements from both arrays and place the smaller one in the merged array
+        while (i < left.length && j < right.length) {
+            if (left[i] <= right[j]) {
+                arr[k++] = left[i++];    // Copy element from left array if it's smaller
+            } else {
+                arr[k++] = right[j++];   // Copy element from right array if it's smaller
             }
         }
+
+        // Copy remaining elements from left array, if any
+        while (i < left.length) {
+            arr[k++] = left[i++];
+        }
         
-        // Finally, place pivot in its correct position
-        // All elements before this position are smaller than pivot
-        // All elements after this position are larger than pivot
-        int temp = arr[i + 1];
-        arr[i + 1] = arr[high];
-        arr[high] = temp;
-        
-        // Return the position of pivot
-        return i + 1;
-    }
-    
-    // Main quicksort function implementing divide-and-conquer
-    public static void quicksort(int[] arr, int low, int high) {
-        // Base case: if low >= high, array has 0 or 1 element (already sorted)
-        if(low < high) {
-            /* Example: arr = [3,4,2,5,1,3,5], low = 0, high = 6
-               First partition might result in:
-               [2,1,3,4,5,3,5] with pivotIndex = 2
-               Now array is divided into [2,1] and 
-            */
-            
-            // Get pivot's position after partitioning
-            int pivotIndex = partition(arr, low, high);
-            
-            // Recursively sort elements before pivot
-            quicksort(arr, low, pivotIndex - 1);
-            
-            // Recursively sort elements after pivot
-            quicksort(arr, pivotIndex + 1, high);
+        // Copy remaining elements from right array, if any
+        while (j < right.length) {
+            arr[k++] = right[j++];
         }
     }
-    
+
+    // Utility method to print array
+    public static void printArray(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+
+    // Main method to test the merge sort implementation
     public static void main(String[] args) {
-        // Initialize test array
-        int[] arr = {3, 4, 2, 5, 1, 3, 5};
+        // Test array
+        int arr[] = {2, 3, 1, 4, 5, 6, 7, 4, 2, 4};
         
-        // Print original array
-        System.out.println("Array before sorting: ");
-        for(int i : arr) {
-            System.out.print(i + " ");
-        }
+        System.out.println("Original array:");
+        printArray(arr);
         
-        // Call quicksort with initial parameters
-        // low = 0 (start of array)
-        // high = arr.length-1 (end of array)
-        quicksort(arr, 0, arr.length - 1);
+        // Sort the array using merge sort
+        mergesort(arr);
         
-        // Print sorted array
-        System.out.println("\nArray after sorting:");
-        for(int i : arr) {
-            System.out.print(i + " ");
-        }
-        
-        /* Execution flow example:
-           Initial array: [3,4,2,5,1,3,5]
-           After first partition: [2,1,3,4,5,3,5]
-           Left subarray: [2,1]
-           Right subarray: [4,5,3,5]
-           Final sorted array: [1,2,3,3,4,5,5]
-        */
+        System.out.println("Sorted array:");
+        printArray(arr);
     }
 }
+*/
+/*
+ Initial array: [2, 3, 1, 4]
+
+Step 1: Split
+Left: [2, 3]
+Right: [1, 4]
+
+Step 2: Split left
+Left: [2]
+Right: [3]
+Merge them -> [2, 3]
+
+Step 3: Split right
+Left: [1]
+Right: [4]
+Merge them -> [1, 4]
+
+Step 4: Final merge
+Left: [2, 3]
+Right: [1, 4]
+Merge them -> [1, 2, 3, 4]
+ */
+
+ import java.util.Arrays;
+
+class Radix {
+    // Main Radix Sort method
+    public static void radixSort(int[] arr) {
+        // Find the maximum number to know number of digits
+        int max = Arrays.stream(arr).max().getAsInt();
+        
+        // Do counting sort for every digit
+        // exp is 1, 10, 100, 1000, ... for ones, tens, hundreds place, etc.
+        for (int exp = 1; max / exp > 0; exp *= 10) {
+            countingSortByDigit(arr, exp);
+        }
+    }
+
+    // Method to do counting sort for a particular digit (specified by exp)
+    private static void countingSortByDigit(int[] arr, int exp) {
+        int n = arr.length;
+        // Output array to store sorted numbers
+        int[] output = new int[n];
+        // Count array to store count of digits (0-9)
+        int[] count = new int[10];
+        
+        // Store count of occurrences of digits at position exp
+        for (int i = 0; i < n; i++) {
+            // (arr[i]/exp)%10 gives the digit at exp position
+            count[(arr[i] / exp) % 10]++;
+        }
+
+        // Change count[i] so that count[i] now contains actual
+        // position of this digit in output[]
+        for (int i = 1; i < 10; i++) {
+            count[i] += count[i - 1];
+        }
+
+        // Build the output array
+        // Moving from right to left to maintain stability
+        for (int i = n - 1; i >= 0; i--) {
+            int digit = (arr[i] / exp) % 10;
+            // Place the element in its correct position
+            output[count[digit] - 1] = arr[i];
+            // Decrease count for the digit
+            count[digit]--;
+        }
+
+        // Copy the output array to arr[], so that arr[] now
+        // contains sorted numbers according to current digit
+        System.arraycopy(output, 0, arr, 0, n);
+    }
+
+    // Utility method to print array
+    public static void printArray(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " "); // Changed println to print for better output format
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {170, 45, 75, 90, 802, 24, 2, 66};
+        
+        System.out.println("Original array:");
+        printArray(arr);
+        
+        radixSort(arr);
+        
+        System.out.println("Sorted array:");
+        printArray(arr);
+    }
+}
+/* 
+Step 1: Sort by ones place (exp = 1)
+170 → 0
+45  → 5
+75  → 5
+After first pass: [170, 45, 75]
+
+Step 2: Sort by tens place (exp = 10)
+170 → 7
+45  → 4
+75  → 7
+After second pass: [45, 170, 75]
+
+Step 3: Sort by hundreds place (exp = 100)
+170 → 1
+45  → 0
+75  → 0
+Final result: [45, 75, 170]
+
+*/
