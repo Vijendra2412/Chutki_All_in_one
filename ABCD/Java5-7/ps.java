@@ -58,10 +58,10 @@ double           0.0d           8 byte
 
 // import java.beans.Statement;
 // import java.util.ResourceBundle.Control;
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class ps {
-    public static void main(String[] args) {
+// public class ps {
+//     public static void main(String[] args) {
         // int x =11;
         // System.out.println(x++);//11
         // System.out.println(++x);//13
@@ -263,8 +263,8 @@ Check for Alphabet or Not
 
 Write a program that checks whether a given character is an alphabet or not.
 
-*/
-Scanner sc = new Scanner(System.in);
+// */
+// Scanner sc = new Scanner(System.in);
 
 
 // System.out.println("enter ur pin");
@@ -440,17 +440,48 @@ Scanner sc = new Scanner(System.in);
 // } while (i>=10);
 
 
-int x =123;
-int reversed = 0;
-for(; x!=0;x/=10){
-    int digit = x%10;
-    reversed = reversed*10 + digit;
-}
-System.out.println("reversed:-  " + reversed);
+// int x =123;
+// int reversed = 0;
+// for(; x!=0;x/=10){
+//     int digit = x%10;
+//     reversed = reversed*10 + digit;
+// }
+// System.out.println("reversed:-  " + reversed);
+
+// for(int i =0;i<=10;i++){
+//     if(i==5){
+//         continue;
+//     }
+//     System.out.println(i);
+// }
+
+//outerloop
+// for(int i=1;i<=3;i++){
+//     System.out.println(" outer " + i);
+//     for(int j=1;i<=3;i++){
+//         System.out.println(" inner "+j);
+//         if(i==2 && j==3){
+//             break;
+//         }
+//         System.out.println(i+ " " + j);
+//     }
+
+// }
+
+//     }
+// }
 
 
-    }
-}
 
+//---Oops concept---
 
+//  class oops{
+//     //field,
+//     //method
+//     int x ; // instance varible
+//     public static void main(String[] args) {
+//         oops obj = new oops();
+//         System.out.println(obj.x);
+//     }
 
+//  }
