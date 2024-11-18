@@ -3131,29 +3131,118 @@ public class OddPositionElements {
 //     }
 // }
 
-enum size{
-        SMALL ,MEDIUM ,LARGE , EXTRALARGE;
+// enum size{
+//         SMALL ,MEDIUM ,LARGE , EXTRALARGE;
 
 
-        public String getSize(){
-            switch (this) {
-                case SMALL:
-                return "small";
+//         public String getSize(){
+//             switch (this) {
+//                 case SMALL:
+//                 return "small";
 
-                case MEDIUM:
-                return "medium";
+//                 case MEDIUM:
+//                 return "medium";
                     
-                default:
-                return null;
+//                 default:
+//                 return null;
               
             
                
+//             }
+//         }
+//         public static void main(String[] args) {
+//             System.out.println(size.SMALL.getSize());
+//         }
+// }
+
+
+// an exception is an unexpected event that occur during program execution
+// throw
+// error      exception
+//            runtimeException    IOexception
+
+// syntax:- try-catch
+// class exc{
+//     public static void main(String[] args) {
+//         try {
+            
+//         } catch (Exception e) {
+//             // TODO: handle exception
+//         }
+//     }
+// }
+
+// class exc{
+//     public static void main(String[] args) {
+//         // try {
+//         //     int divide = 2/2;
+//         //     System.out.println(divide);
+//         // } catch (ArithmeticException e) {
+//         //     System.out.println("Arithmetic exception=> " + e.getMessage());
+//         // }
+//         // finally{
+//         //     System.out.println("--its finally block--");
+//         // }
+//     }
+// }
+
+
+// class exc{
+//     public static void divideByzero(){
+//         throw new ArithmeticException("tryying to divide by 0");
+//     }
+//     public static void main(String[] args) {
+//         divideByzero();
+//     }
+// }
+
+// class exc{
+//     public static void findfile() throws IOException{
+//         File newFile = new File("test.txt");
+//         FileInputStream stream = new FileInputStream(newFile);
+//     }
+//     public static void main(String[] args) {
+//         try {
+//             findfile();
+//         } catch (IOException e) {
+//             System.out.println(e);
+//         }
+//     }
+// }
+
+
+import java.io.*;
+
+public class Child {
+    private int[] list = {2,3,4,5,6,6};
+    
+    public void writeList() {
+        PrintWriter out = null;
+        try {
+            System.out.println("--Entering try statement--");
+            out = new PrintWriter(new FileWriter("ABCD\\10_11_JAva\\test.txt"));
+            
+            // Changed loop condition to list.length
+            for(int i = 0; i < list.length; i++) {
+                out.println("value at: " + i + " = " + list[i]);
+            }
+            System.out.println("Successfully wrote to file");
+            
+        } catch (IOException e) {
+            System.out.println("IOException => " + e.getMessage());
+        } finally {
+            if(out != null) {
+                System.out.println("Closing PrintWriter");
+                out.close();
+            } else {
+                System.out.println("PrintWriter not open");
             }
         }
-        public static void main(String[] args) {
-            System.out.println(size.SMALL.getSize());
-        }
+    }
+
+    // Optional: add main method to test
+    public static void main(String[] args) {
+        Child child = new Child();
+        child.writeList();
+    }
 }
-
-
-

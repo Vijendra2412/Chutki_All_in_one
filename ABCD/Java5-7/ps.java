@@ -478,10 +478,80 @@ Write a program that checks whether a given character is an alphabet or not.
 //  class oops{
 //     //field,
 //     //method
-//     int x ; // instance varible
+//     int age; // instance varible
+//     String name;
 //     public static void main(String[] args) {
-//         oops obj = new oops();
-//         System.out.println(obj.x);
+//         //----By Refrence variable----
+//         // oops obj = new oops();
+
+//         // obj.age=12;
+//         // obj.name = "abc";
+//         // System.out.println(obj.age +" "+ obj.name);     
+
+//     }
+//  }
+
+
+
+
+// class oops{
+//     int abc;
+//     int xyz;
+  
+//    public void abc(int x, int y){
+//     abc =x;
+//     xyz =y;
+//     }
+//     void display(){
+//         System.out.println(abc + " "+ xyz);
 //     }
 
+//     public static void main(String[] args) {
+//         oops obj = new oops();
+//         obj.abc(12,12);
+//         obj.display();
+//     }
 //  }
+
+
+
+// class circle{
+//     int radius;
+//     void value(int r){
+//         radius = r;
+//     }
+//     void formulae(){
+//         System.out.println(3.14*radius*radius);
+//     }
+//     public static void main(String[] args) {
+//         circle obj = new circle();
+//         obj.value(2);
+//         obj.formulae();
+//     }
+// }
+
+// class anony{
+//     void abc(int n){
+//         int abc = 10;
+//         for(int i =10;i<=n;i++){
+//             abc +=i;
+//         }
+//         System.out.println("sum is: " + abc);
+//     }
+//     public static void main(String[] args) {
+//         new anony().abc(15);
+//     }
+// }
+
+
+class retrn{
+    public static int  abc(int x){
+        return x*x;
+    }
+    public static void main(String[] args) {
+        // retrn obj = new retrn();
+        // int result =abc(2);
+        // System.out.println(result);
+        System.out.println(abc(5));
+    }
+}
