@@ -182,10 +182,121 @@ types of Operator:-
 //         obj.display();
 //         obj1.display();
 //     }
+//  
+
+
+// Static keywords 
+// variable
+// method
+// blocks
+// nested class
+
+// class staticc{
+//   static  int age =22;
+// String name = "vijendra";
+// int id = 123;
+// public static void main(String[] args) {
+//     staticc obj = new staticc();
+//     obj.age = 23;
+//     System.out.println(obj.age);
+// }
+// }
+
+// class staticc{
+//   int age;
+//   String name;
+//  static  int id = 321;
+//  staticc(int a, String n){
+// age= a;
+// name =n;
+//  }
+//  void display(){
+//     System.out.println("name is:- " + name + " age is:- "+age + " id is:- " + id);
+//  }
+
+//   public static void main(String[] args) {
+//       staticc obj = new staticc(23,"vijendra");
+  
+//       obj.display();
+//   }
+//   }
+
+
+// class counter{
+//   static  int count =0;
+//     counter(){
+//         count++;
+//         System.out.println(count);
+//     }
+// public static void main(String[] args) {
+//     counter obj =  new counter();
+//     counter obj1 =  new counter();
+//     counter obj2 =  new counter();
+// }
 // }
 
 
+// class bache{
+//     int rollno;
+//     String name;
+//     static String college = "ABC";
+//     static void method(){
+//         college = "def";
+//     }
+
+//     bache(int r, String n){
+//         rollno = r;
+//         name = n;
+//     }
+//     void display(){
+//         System.out.println("rollnumber is:- " + rollno + " name:- "+ name + " college is:- " + college);
+//     }
+
+   
+// }
+
+// class av{
+//     public static void main(String[] args) {
+//         bache.method();
+//         bache obj = new bache(123, "vijendra");
+//         bache obj1 = new bache(1234, "vijendra1");
+//         obj.display();
+//         obj1.display();
+
+//     }
+// }
+
+// class solve{
+//     static int Triangle(int x){
+//         return x+x+x;
+//     }
+//     public static void main(String[] args) {
+//         System.out.println(solve.Triangle(5));
+//     }
+// }
 
 
+// class non{
+//     static int x = 23;
+//     public static void main(String[] args) {
+//         System.out.println(x);
+//     }
+// }
 
+//Static block
+class blck{
+    static{
+        int x =9;
+        System.out.println("its stastic block " + x);
+    }
+    public static void main(String[] args) {
+        System.out.println("its main ");
+    }
+}
 
+// class without{
+//     static{
+//         System.out.println(" --its static block-- ");
+//     }
+//     System.exit(0);
+// }
