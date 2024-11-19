@@ -115,8 +115,8 @@ types of Operator:-
 // inverting the value of a boolean
     */
 
-    class p{
-        public static void main(String[] args) {
+    // class p{
+    //     public static void main(String[] args) {
             
         //    int a =10;
         //    int b= -10;
@@ -134,5 +134,58 @@ types of Operator:-
         
 
 
-        }
-    }
+    //     }
+    // }
+
+//   class pradeep {
+  
+//    int age;
+//    String name;
+
+//    pradeep(int a, String n){
+//     age = a;
+//     name= n;
+//    }
+//    void  display(){
+//     System.out.println("age is:- " + age + " " + "name is:- " + name);
+//    }
+
+  
+//     public static void main(String[] args) {
+//         pradeep obj =  new pradeep(20,"pradeep");
+//         obj.display();
+//     }
+         
+//     }
+
+// class pradeep{
+//     int age;
+//     String name;
+//     int id;
+
+//     pradeep(int a,String n){
+//         age = a;
+//         name= n;
+
+//     }
+//     pradeep(int a,String n,int i){
+//         age = a;
+//         name = n;
+//         id= i;
+//     }
+//     void display(){
+//     System.out.println("age is:- " + age + " " + "name is:- " + name + " id is:- "+ id);
+//     }
+//     public static void main(String[] args) {
+//         pradeep obj = new pradeep(24, "vijendra");
+//         pradeep obj1 = new pradeep(20, "pradeeep", 123);
+//         obj.display();
+//         obj1.display();
+//     }
+// }
+
+
+
+
+
+

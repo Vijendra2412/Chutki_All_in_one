@@ -3211,38 +3211,113 @@ public class OddPositionElements {
 // }
 
 
-import java.io.*;
+// import java.io.*;
 
-public class Child {
-    private int[] list = {2,3,4,5,6,6};
+// public class Child {
+//     private int[] list = {2,3,4,5,6,6};
     
-    public void writeList() {
-        PrintWriter out = null;
-        try {
-            System.out.println("--Entering try statement--");
-            out = new PrintWriter(new FileWriter("ABCD\\10_11_JAva\\test.txt"));
+//     public void writeList() {
+//         PrintWriter out = null;
+//         try {
+//             System.out.println("--Entering try statement--");
+//             out = new PrintWriter(new FileWriter("ABCD\\10_11_JAva\\test.txt"));
             
-            // Changed loop condition to list.length
-            for(int i = 0; i < list.length; i++) {
-                out.println("value at: " + i + " = " + list[i]);
-            }
-            System.out.println("Successfully wrote to file");
+//             // Changed loop condition to list.length
+//             for(int i = 0; i < list.length; i++) {
+//                 out.println("value at: " + i + " = " + list[i]);
+//             }
+//             System.out.println("Successfully wrote to file");
             
-        } catch (IOException e) {
-            System.out.println("IOException => " + e.getMessage());
-        } finally {
-            if(out != null) {
-                System.out.println("Closing PrintWriter");
-                out.close();
-            } else {
-                System.out.println("PrintWriter not open");
-            }
-        }
-    }
+//         } catch (IOException e) {
+//             System.out.println("IOException => " + e.getMessage());
+//         } finally {
+//             if(out != null) {
+//                 System.out.println("Closing PrintWriter");
+//                 out.close();
+//             } else {
+//                 System.out.println("PrintWriter not open");
+//             }
+//         }
+//     }
 
-    // Optional: add main method to test
+//     // Optional: add main method to test
+//     public static void main(String[] args) {
+//         Child child = new Child();
+//         child.writeList();
+//     }
+// }
+
+
+// class T{
+//     public static void main(String[] args) {
+    //    try {
+    //      int x = 23/0;
+    //      System.out.println(x);
+    //    } catch (Exception e) {
+    //    System.out.println("Can't divide by zero");
+    //    }
+
+    // int x =10;
+    // int y =0;
+    // int z;
+    // try {
+    //     z =x/y;
+    // } catch (Exception e) {
+    //    System.out.println(x/(y+3));
+    // }
+
+
+    // try {
+    //     // int x =10/0;
+    //     int x[] = {1,2,3,4};
+    //     System.out.println(x[3]);
+    // } catch (ArrayIndexOutOfBoundsException e) {
+    //     System.out.println(e);
+    // }
+    
+
+    // try {
+    //     int x[] = new int[5];
+    //     x[5] = 10/0;
+    // } 
+    // catch (ArithmeticException e) {
+    //    System.out.println("its arithmetic");
+    // }
+    // catch(ArrayIndexOutOfBoundsException e){
+    //     System.out.println("array exc");
+    // }
+    // catch(Exception e){
+    //     System.out.println("exception occur");
+    // }
+
+    // try {
+    //     String x = null;
+    //     System.out.println(x.length());
+    // }  
+    // catch (ArithmeticException e) {
+    //        System.out.println("its arithmetic");
+    //     }
+    //     catch(ArrayIndexOutOfBoundsException e){
+    //         System.out.println("array exc");
+    //     }
+    //     catch(Exception e){
+    //         System.out.println("exception occur" + e.getMessage());
+    //     }
+//     }
+// }
+
+
+class throww{
+    public static void method(int age){
+        if(age<18){
+            throw new ArithmeticException("person is not eligible");
+        }
+        else{
+            System.out.println("its eligible");
+        }
+        
+    }
     public static void main(String[] args) {
-        Child child = new Child();
-        child.writeList();
+        method(21);
     }
 }
