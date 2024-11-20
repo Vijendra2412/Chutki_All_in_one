@@ -3307,17 +3307,60 @@ public class OddPositionElements {
 // }
 
 
-class throww{
-    public static void method(int age){
-        if(age<18){
-            throw new ArithmeticException("person is not eligible");
-        }
-        else{
-            System.out.println("its eligible");
-        }
+// class throww{
+//     public static void method(int age){
+//         if(age<18){
+//             throw new ArithmeticException("person is not eligible");
+//         }
+//         else{
+//             System.out.println("its eligible");
+//         }
         
-    }
-    public static void main(String[] args) {
-        method(21);
-    }
-}
+//     }
+//     public static void main(String[] args) {
+//         method(21);
+//     }
+// }
+
+// class fruits{
+//     public void displayinfo(){
+//         System.out.println("its a fruits");
+//     }
+// }
+
+// class apple extends fruits{
+//     @Override
+//     public void displayinfo(){
+//         System.out.println("its an apple");
+//     }
+//     public static void main(String[] args) {
+//         apple obj = new apple();
+//         obj.displayinfo();
+//     }
+// }
+
+
+// @AnnotationName()
+// @AnnotationName(elementname = "elementvalue")
+// @AnnotationName("elementvalue")
+// @AnnotationName(ele1="v1", ele2="v2",...)
+
+// import java.util.*;
+// class anno{
+//     @SuppressWarnings("unchecked")
+//     static void wordlist(){
+//         ArrayList wordList = new ArrayList<>();
+//         wordList.add("java");
+//         wordList.add("java1");
+//         wordList.add("java2");
+//         wordList.add("java3");
+
+//         System.out.println(wordList);
+//     }
+//     public static void main(String[] args) {
+//         wordlist();
+//     }
+// }
+
+
+
