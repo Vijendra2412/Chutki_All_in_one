@@ -284,15 +284,15 @@ types of Operator:-
 // }
 
 //Static block
-class blck{
-    static{
-        int x =9;
-        System.out.println("its stastic block " + x);
-    }
-    public static void main(String[] args) {
-        System.out.println("its main ");
-    }
-}
+// class blck{
+//     static{
+//         int x =9;
+//         System.out.println("its stastic block " + x);
+//     }
+//     public static void main(String[] args) {
+//         System.out.println("its main ");
+//     }
+// }
 
 // class without{
 //     static{
@@ -300,3 +300,142 @@ class blck{
 //     }
 //     System.exit(0);
 // }
+
+
+// this keyword 
+// state 
+// behaviour
+
+// class ghi{
+//     int rollno;
+//     String name;
+//     float fees;
+
+//     ghi(int rollno, String name, float fees){
+//        this.rollno = rollno;
+//        this.name = name;
+        
+//        this.fees = fees;  
+//     }
+
+//     void display(){
+//         System.out.println(rollno+" "+name+" "+fees);
+//     }
+//     public static void main(String[] args) {
+//         ghi obj = new ghi(123, "vj", 1000);
+//         obj.display();
+//     }
+// }
+
+// class ghi{
+//     void m(){
+//         System.out.println("hello m");
+//     }
+//     void n(){
+//         this.m();
+//         System.out.println("hello n");
+//     }
+//     public static void main(String[] args) {
+//         ghi obj = new ghi();
+//         // obj.m();
+//         obj.n();
+//     }
+// // }
+
+// class conc{
+//     conc(){
+//         this();
+//         System.out.println(" its con1");
+//     }
+//     conc(int x){
+    
+//         System.out.println(x);
+//     }
+//     public static void main(String[] args) {
+//         conc obj = new conc(12);
+
+//     }
+// }
+
+// class m{
+//     m getA(){
+//         return this;
+//     }
+//     void msg(){System.out.println("hello vj");
+//     }
+//     public static void main(String[] args) {
+//         new m().getA().msg();
+//     }
+// }
+
+// class ref{
+//     void m(){
+//         System.out.println(this);
+//     }
+//     public static void main(String[] args) {
+//         ref obj = new ref();
+//         obj.m();
+//     }
+// }
+
+
+// ------Inheritence------
+// class p{
+//     //data members
+//     int height = 6;
+// }
+
+// class child extends p{
+//     int age = 14;
+
+//     public static void main(String[] args) {
+//         child obj = new child();
+//         System.out.println(obj.height +" "+ obj.age);
+//     }
+// }
+
+// class p{
+//     //data members
+//     int height = 6;
+// }
+
+// class child extends p{
+//     int age = 14;
+// }
+
+// class child1 extends child{
+//     int length =12;
+    
+// }
+
+
+// class pradeeep{
+//     public static void main(String[] args) {
+//         child1 obj = new child1();
+//         System.out.println(obj.height +" "+ obj.age + " "+ obj.length);
+//     }
+// }
+
+class p{
+    //data members
+    int height = 6;
+}
+
+class child extends p{
+    int age = 14;
+}
+
+class child1 extends p{
+    int length =12;
+    
+}
+
+class pradeeep{
+    public static void main(String[] args) {
+        child1 obj = new child1();
+        System.out.println(obj.height + " "+ obj.length);
+
+        child obj1 = new child();
+        System.out.println(obj1.height +" "+ obj1.age );
+    }
+}
