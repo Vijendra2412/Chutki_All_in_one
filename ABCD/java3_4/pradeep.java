@@ -416,26 +416,45 @@ types of Operator:-
 //     }
 // }
 
-class p{
-    //data members
-    int height = 6;
-}
+// class p{
+//     //data members
+//     int height = 6;
+// }
 
-class child extends p{
-    int age = 14;
-}
+// class child extends p{
+//     int age = 14;
+// }
 
-class child1 extends p{
-    int length =12;
+// class child1 extends p{
+//     int length =12;
     
-}
+// }
 
-class pradeeep{
+// class pradeeep{
+//     public static void main(String[] args) {
+//         child1 obj = new child1();
+//         System.out.println(obj.height + " "+ obj.length);
+
+//         child obj1 = new child();
+//         System.out.println(obj1.height +" "+ obj1.age );
+//     }
+// }
+
+// class pradeep {
+//     public static void main(String[] args) {
+//         String str = "*";
+//         for(int i = 1; i <= 5; i++) {
+//             // Use String.repeat() method to repeat * i times
+//             System.out.println(str);
+//             str=str+"*";
+//         }
+//     }
+// }
+class pradeeep {
     public static void main(String[] args) {
-        child1 obj = new child1();
-        System.out.println(obj.height + " "+ obj.length);
-
-        child obj1 = new child();
-        System.out.println(obj1.height +" "+ obj1.age );
+        for(int i = 1; i <= 5; i++) {
+            // Use String.repeat() method to repeat * i times
+            System.out.println("_".repeat(5-i)+"*".repeat(i));
+        }
     }
-}
+} 
