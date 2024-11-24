@@ -462,19 +462,19 @@ class threadpriority extends Thread{
         System.out.println("inside run method");
     }
     public static void main(String[] args) {
-        threadpriority obj = new threadpriority();
-        threadpriority obj1 = new threadpriority();
-        threadpriority obj2 = new threadpriority();
-        System.out.println("priorty thread for obj: " + obj.getPriority());
-        System.out.println("priorty thread for obj1: " + obj1.getPriority());
-        System.out.println("priorty thread for obj2: " + obj2.getPriority());
-        obj.setPriority(7);
-        obj1.setPriority(2);
-        obj2.setPriority(9);
+        // threadpriority obj = new threadpriority();
+        // threadpriority obj1 = new threadpriority();
+        // threadpriority obj2 = new threadpriority();
+        // System.out.println("priorty thread for obj: " + obj.getPriority());
+        // System.out.println("priorty thread for obj1: " + obj1.getPriority());
+        // System.out.println("priorty thread for obj2: " + obj2.getPriority());
+        // obj.setPriority(7);
+        // obj1.setPriority(2);
+        // obj2.setPriority(9);
 
-        System.out.println("priorty thread for obj: " + obj.getPriority());
-        System.out.println("priorty thread for obj1: " + obj1.getPriority());
-        System.out.println("priorty thread for obj2: " + obj2.getPriority());
+        // System.out.println("priorty thread for obj: " + obj.getPriority());
+        // System.out.println("priorty thread for obj1: " + obj1.getPriority());
+        // System.out.println("priorty thread for obj2: " + obj2.getPriority());
 
 
 

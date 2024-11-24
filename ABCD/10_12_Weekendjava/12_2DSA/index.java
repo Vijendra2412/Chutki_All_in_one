@@ -2016,14 +2016,106 @@ Step 3: Sort by hundreds place (exp = 100)
 75  → 0
 Final result: [45, 75, 170]
 
-*/
-class Q{
-    public static void main(String[] args) {
-        Queue<String> x = new LinkedList<>();
-        Queue<String> y = new ArrayDeque<>();
-        Queue<String> z = new PriorityQueue<>();
+// */
+// class Q{
+//     public static void main(String[] args) {
+//         Queue<String> x = new LinkedList<>();
+//         Queue<String> y = new ArrayDeque<>();
+//         Queue<String> z = new PriorityQueue<>();
 
 
 
+//     }
+// }
+
+// class recursive{
+//     int fact(int n){
+//         if(n<=1){
+//             return 1;
+//         }
+//         else{
+//             return n*fact(n-1);
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         recursive obj = new recursive();
+//         System.out.println(obj.fact(5));
+//     }
+// }
+// 
+
+// class recursion{
+//     int fib(int n){
+//         if(n==0){
+//             return 0;
+//         }
+//         else if(n==1){
+//             return 1;
+//         }
+//         else{
+//             return ( fib(n-1) + fib(n-1));
+//         }
+//     }
+// }
+
+
+class NQueen {
+    private static boolean isSafe(int board[][] , int rows,int col, int n){
+        for(int i =0;i<row; i++){
+            if(board[i][col] ==1){
+                return false;
+            }
+        }
+    
+
+    for(int i=row,j=col;i>=0 && j>=0;i--,j--){
+        if(board[i][j]==1){
+            return false;
+        }
     }
+
+    for(int i=row,j=col;i>=0 && j<n;i--,j++){
+        if(board[i][j]==1){
+            return false;
+        }
+    }
+    return true;
+}
+private static boolean solveQueens(int board[][], int row , int n){
+    if(row>=n){
+        return true;
+    }
+    for(int col = 0;col<n;col++){
+        if(isSafe(board, row, col, n)){
+            board[row][col] =1;
+            if(solveQueens(board, row+1, n)){
+                return true;
+            }
+            board[row][col] = 0;
+        }
+    }
+    return false;
+}
+
+private static void printboard(int board[][],int n){
+for(int i=0;i<n;i++){
+    for(int j=0;j<n;j++){
+        System.out.print(board[i][j] + " ");
+    }
+    System.out.println();
+}
+}
+public static void main(String[] args) {
+    int n =4;
+    int [][] board = new int[n][n];
+    if(solveQueens(board,0,n)){
+        System.out.println("solution found");
+        printboard(board, n);
+    }
+    else{
+        System.out.println("no solution exists");
+    }
+}
+
 }
