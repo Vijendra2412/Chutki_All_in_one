@@ -264,25 +264,221 @@ import java.io.FileInputStream;
 // }
 // }
 
-class skip {
+// class skip {
+//     public static void main(String[] args) {
+//         try {
+//             FileInputStream input = new FileInputStream("abc.txt");
+
+//             input.skip(5);
+//             System.out.println("input Stream After skipping 5 bytes");
+
+//             int i = input.read();
+
+//             while (i != -1) {
+//                 System.out.print((char) i);
+//                 i = input.read();
+//             }
+//             input.close();
+
+//         } catch (Exception e) {
+//             e.getStackTrace();
+
+//         }
+//     }
+// }
+
+// class thrd implements Runnable{
+//     public void run(){
+//         try {
+//             Thread.sleep(1000);
+//         } catch (InterruptedException e) {
+//            e.getStackTrace();
+//         }
+//         System.out.println(" its thread 1");
+//     }
+//     public static void main(String[] args) {
+
+//     }
+// }
+
+// class thrd extends Thread{
+//     public void run(){
+//         System.out.println("Thread is running...");
+//     }
+//     public static void main(String[] args) {
+//         thrd obj = new thrd();
+//         obj.start();
+//     }
+// }
+
+// class mtli implements Runnable{
+//     public void run(){
+//         System.out.println("Thread is running....");
+//     }
+//     public static void main(String[] args) {
+//         mtli obj =  new mtli();
+//         Thread t1 = new Thread(obj);
+//         t1.start();
+//     }
+// }
+
+// class thread1{
+//     public static void main(String[] args) {
+//         Thread t = new Thread("its java class");
+//         t.start();
+//         String str = t.getName();
+//         System.out.println(str);
+//     }
+// }
+
+//  class Thread2 implements Runnable {
+//     public void run() {
+//         System.out.println("Thread is running....");
+//     }
+
+//     public static void main(String[] args) {
+//         Runnable r1 = new Thread2();
+//         Thread t1 = new Thread(r1, "Its New Thread");
+//         t1.start();
+//         String str = t1.getName();
+//         System.out.println(str);
+//     }
+// }
+
+// class sleep extends Thread {
+//     public void run() {
+//         for (int i = 1; i < 10; i++) {
+//             try {
+//                 Thread.sleep(500);
+//             } catch (InterruptedException e) {
+//                 System.out.println(e);
+//             }
+//             System.out.println(i);
+//         }
+
+//     }
+
+//     public static void main(String[] args) {
+//         sleep s = new sleep();
+//         sleep s1 = new sleep();
+//         s.start();
+//         // s1.start();
+//     }
+// }
+
+// class sleep {
+//     public static void main(String[] args) {
+ 
+//         try {
+//             for(int i = 0;i<5;i++){
+//                 Thread.sleep(-100);
+//                 System.out.println(i);
+//             }
+//         } catch (InterruptedException e) {
+//             System.out.println(e);
+//         }
+//     }
+// }
+
+
+
+// class twice extends Thread{
+//     public void run(){
+//         System.out.println("running........");
+//     }
+//     public static void main(String[] args) {
+//         twice obj = new twice();
+//         obj.start();
+//         obj.start();
+//     }
+// }
+
+// class test extends Thread{
+//     public void run(){
+   
+//         for(int i =1;i<5;i++){
+//             try {
+//                 Thread.sleep(500);
+//             } catch (Exception e) {
+//                System.out.println(e);
+//             }
+//             System.out.println(i);
+//         }
+//     }
+//     public static void main(String[] args) {
+//         test obj = new test();
+//         obj.run();
+//         obj.run();
+//     }
+// }
+
+
+// class joinn extends Thread{
+//     public void run(){
+//         for(int i=0;i<2;i++){
+//             try {
+//                 Thread.sleep(500);
+//                 System.out.println("current thread name is " + Thread.currentThread().getName());
+//             } catch (Exception e) {
+//                System.out.println("Caught exc " + e);
+//             }
+//         }
+//     }
+// }
+
+// class kl{
+//     public static void main(String[] args) {
+//         joinn obj = new joinn();
+//         joinn obj1 = new joinn();
+//         joinn obj2 = new joinn();
+//         obj.start();
+//         try {
+//             System.out.println("current thread name is " + Thread.currentThread().getName());
+//             obj.join();
+//         } catch (Exception e) {
+//            System.out.println(e);
+//         }
+//         obj1.start();
+//         try {
+//             System.out.println("current thread name is " + Thread.currentThread().getName());
+//             obj1.join();
+//         } catch (Exception e) {
+//            System.out.println(e);
+//         }
+//         obj2.start();
+//         try {
+//             System.out.println("current thread name is " + Thread.currentThread().getName());
+//             obj2.join();
+//         } catch (Exception e) {
+//            System.out.println(e);
+//         }
+
+//     }
+// }
+
+
+class threadpriority extends Thread{
+    public void run(){
+        System.out.println("inside run method");
+    }
     public static void main(String[] args) {
-        try {
-            FileInputStream input = new FileInputStream("abc.txt");
+        threadpriority obj = new threadpriority();
+        threadpriority obj1 = new threadpriority();
+        threadpriority obj2 = new threadpriority();
+        System.out.println("priorty thread for obj: " + obj.getPriority());
+        System.out.println("priorty thread for obj1: " + obj1.getPriority());
+        System.out.println("priorty thread for obj2: " + obj2.getPriority());
+        obj.setPriority(7);
+        obj1.setPriority(2);
+        obj2.setPriority(9);
 
-            input.skip(5);
-            System.out.println("input Stream After skipping 5 bytes");
+        System.out.println("priorty thread for obj: " + obj.getPriority());
+        System.out.println("priorty thread for obj1: " + obj1.getPriority());
+        System.out.println("priorty thread for obj2: " + obj2.getPriority());
 
-            int i = input.read();
 
-            while (i != -1) {
-                System.out.print((char) i);
-                i = input.read();
-            }
-            input.close();
 
-        } catch (Exception e) {
-            e.getStackTrace();
 
-        }
+
     }
 }
