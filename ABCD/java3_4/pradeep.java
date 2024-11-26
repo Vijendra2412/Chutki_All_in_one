@@ -440,21 +440,139 @@ types of Operator:-
 //     }
 // }
 
-// class pradeep {
-//     public static void main(String[] args) {
-//         String str = "*";
-//         for(int i = 1; i <= 5; i++) {
-//             // Use String.repeat() method to repeat * i times
-//             System.out.println(str);
-//             str=str+"*";
-//         }
+//--------Aggregation-------------
+// class vj{
+
+//     // fields
+// }
+
+
+// class pradeep{
+//     int square(int n){
+//         return n*n;
 //     }
 // }
-class pradeeep {
-    public static void main(String[] args) {
-        for(int i = 1; i <= 5; i++) {
-            // Use String.repeat() method to repeat * i times
-            System.out.println("_".repeat(5-i)+"*".repeat(i));
-        }
-    }
-} 
+
+
+// class area{
+//     double pi = 3.14;
+//     pradeep obj;
+
+//     double circle(int radius){
+//         obj =  new pradeep();
+//         int rsqr = obj.square(radius);
+//         return pi*rsqr;
+//     }
+// }
+
+// class lkj{
+//     public static void main(String[] args) {
+//         area a = new area();
+//         System.out.println(a.circle(5));
+//     }
+// }
+
+
+
+// class gh{
+//     static int add(int x, int y){
+//         return x+y;
+//     }
+//     static double add(double m, double n){
+//         return m+n;
+//     }
+
+//     public static void main(String[] args) {
+//         System.out.println(gh.add(2, 3));
+//         System.out.println(gh.add(2.1, 3.1));
+//     }
+// }
+
+
+// class parnt{
+//     void abc(){
+//         System.out.println("its parent class");
+//     }
+// }
+
+// class chld extends parnt{
+//     void abc(){
+//         System.out.println("its child class");
+//     }
+
+//     public static void main(String[] args) {
+//         chld obj = new chld();
+//         obj.abc();
+//     }
+// }
+
+
+// class ij{
+//     void run(){
+//         System.out.println("mukesh is running");
+//     }
+// }
+
+// class chld extends ij{
+
+
+//     public static void main(String[] args) {
+//         chld obj =  new chld();
+//         obj.run();
+//     }
+// }
+
+
+// class salary{
+//     int getintrest(){
+//         return 0;
+//     }
+// }
+
+// class kotak extends salary{
+//     int getintrest(){
+//         return 7;
+//     }
+// }
+
+// class SBI extends salary{
+//     int getintrest(){
+//         return 8;
+//     }
+// }
+
+// class pradeeep{
+//     public static void main(String[] args) {
+//         kotak obj = new kotak();
+//         SBI obj1 = new SBI();
+//         System.out.println(obj.getintrest());
+//         System.out.println(obj1.getintrest());
+
+
+//     }
+// }
+
+
+// class pradeeep{
+//     pradeeep abc(){
+//         return this; 
+//     }
+//     void display(){
+//         System.out.println(" its covriant return type");
+
+//     }
+// }
+
+// class chld extends pradeeep{
+//     chld abc(){
+//         return this;
+//     }
+
+//     // void display(){
+//     //     System.out.println(" its covriant return type");
+
+//     // }
+//     public static void main(String[] args) {
+//         new chld().abc().display();
+//     }
+// }

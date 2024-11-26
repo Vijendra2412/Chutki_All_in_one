@@ -1980,6 +1980,7 @@ System.out.println("Invalid month");
 //     }
 // }
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -3363,4 +3364,23 @@ public class OddPositionElements {
 // }
 
 
+// collection interface 
 
+// collection
+// list set       Queue
+//      sorted    dequeue
+
+
+// add() 
+// remove()
+// iterator()
+// addAll()
+// removeAll()
+// clear()
+
+
+// List
+// ArrayList
+// LinkedList
+// vector
+// stack
