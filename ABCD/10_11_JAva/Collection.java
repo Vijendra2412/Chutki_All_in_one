@@ -1,11 +1,9 @@
 
 import java.util.*;
-import java.util.Vector;
-import java.util.Iterator;
 
-class Collection {
+// class Collection {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
         // List<String> L = new ArrayList<>();
         /*
          * add()
@@ -143,38 +141,37 @@ class Collection {
         // num.add(4);
         // num.add(1);
         // num.add(2);
-        // System.out.println("unsorted:- "  + num);
+        // System.out.println("unsorted:- " + num);
         // num.sort(Comparator.naturalOrder());
         // System.out.println("sorted array:- "+num);
 
         // ArrayList<Integer> num1 = (ArrayList<Integer>)num.clone();
         // System.out.println("clome:- " + num1);
 
-
-        //   ArrayList<String> lang = new ArrayList<>();
-        //   lang.ensureCapacity(2);
+        // ArrayList<String> lang = new ArrayList<>();
+        // lang.ensureCapacity(2);
         // lang.add("java");
         // lang.add("Pyhton");
         // lang.add("Swift");
         // lang.add("C++");
         // System.out.println("ArrayList:- "+lang);
-       
-        //   ArrayList<Integer> num = new ArrayList<>();
+
+        // ArrayList<Integer> num = new ArrayList<>();
         // num.add(3);
         // num.add(4);
         // num.add(1);
         // num.add(2);
-        // System.out.println("unsorted:- "  + num);
+        // System.out.println("unsorted:- " + num);
 
         // int pos = num.indexOf(4);
         // System.out.println("index:- "+pos);\
 
-        Stack <String> fruits = new Stack<>();
-        fruits.push("apple");
-        fruits.push("banana");
-        fruits.push("mango");
-        fruits.push("grapes");
-        System.out.println("stack:- " + fruits);
+        // Stack <String> fruits = new Stack<>();
+        // fruits.push("apple");
+        // fruits.push("banana");
+        // fruits.push("mango");
+        // fruits.push("grapes");
+        // System.out.println("stack:- " + fruits);
         // System.out.println(fruits.pop());
 
         // String ele = fruits.peek();
@@ -187,9 +184,78 @@ class Collection {
         // boolean result = fruits.isEmpty();
         // System.out.println(result);
 
+        // Queue
+        // Queue a = new LinkedList<>();
+        // add()
+        // offer()
+        // element()
+        // peek()
+        // remove()
+        // poll()
+        // Queue<String> a = new LinkedList<>();
+        // a.offer("apple");
+        // a.offer("app");
+        // a.offer("appl");
+        // a.offer("ple");
+
+        // System.out.println(a.peek());
+        // System.out.println(a.poll());
+        // System.out.println(a);
+
+        // Queue<Integer> a = new PriorityQueue<>();
+        // a.offer(3);
+        // a.offer(2);
+        // a.offer(1);
+        // a.offer(4);
+        // System.out.println(a);
+        // System.out.println(a.peek());
+        // System.out.println(a.poll());
+
+        // PriorityQueue<Integer> a = new PriorityQueue<>();
+        // a.offer(1);
+
+        // a.add(3);
+        // a.add(2);
+        // System.out.println(a);
+
+        // a.offer(1);
+        // System.out.println(a);
+
+        // Iterator<Integer> num = a.iterator();
+        // while (num.hasNext()) {
+        // System.out.print(num.next());
+        // System.out.print(", ");
+        // }
 
 
+//     }
+// }
 
+class c1{
+    public static void main(String[] args) {
+        
+        PriorityQueue<Integer> num = new PriorityQueue<>();
+        num.add(3);
+        num.add(4);
+        num.add(1);
+        num.add(2);
 
+        System.out.println(num);
+    }
+}
+class compr implements Comparator<Integer>{
+    public int compare(Integer num1,Integer num2){
+        int value = num1.compareTo(num2);
+        if(value>0){
+            return -1;
+
+        }
+        else if(value<0){
+            return  1;
+        }
+        else{
+            return 0;
+        }
+        
     }
 }
