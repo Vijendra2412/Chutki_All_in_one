@@ -231,31 +231,99 @@ import java.util.*;
 //     }
 // }
 
-class c1{
+// class c1{
+//     public static void main(String[] args) {
+        
+//         PriorityQueue<Integer> num = new PriorityQueue<>();
+//         num.add(3);
+//         num.add(4);
+//         num.add(1);
+//         num.add(2);
+
+//         System.out.println(num);
+//     }
+// }
+// class compr implements Comparator<Integer>{
+//     public int compare(Integer num1,Integer num2){
+//         int value = num1.compareTo(num2);
+//         if(value>0){
+//             return -1;
+
+//         }
+//         else if(value<0){
+//             return  1;
+//         }
+//         else{
+//             return 0;
+//         }
+        
+//     }
+// }
+
+// class Collection{
+//     public static void main(String[] args) {
+//       String x = "asda@#$123";
+//       String str = "";
+//       String num= "";
+//       String spe = "";
+//       for (int i=0;i<11;i++){
+//         if((int)str.charAt(i)>=97 && (int)str.charAt(i)<=122)
+//             str=str+x.charAt(i);
+//         else
+//             if((int)str.charAt(i)>=48 && (int)str.charAt(i)<=57)
+//                 num=num+x.charAt(i);
+//             else
+//                 spe+=x.charAt(i);
+//       }
+//       System.out.println(str+num+spe);
+//     }
+// }
+class Collection{
     public static void main(String[] args) {
-        
-        PriorityQueue<Integer> num = new PriorityQueue<>();
-        num.add(3);
-        num.add(4);
-        num.add(1);
-        num.add(2);
+        /* 
+         addFirst()
+         addLast()
+         offerFirst()
+         offerLast()
+         getFirst()
+         getLast()
+         removeFirst()
+         removeLast()
+         pollFirst()
+         pollLast()
+         */
+        // Deque<Integer> num = new ArrayDeque<>();
+        // num.offer(1);
+        // num.offerLast(2);
+        // num.offerFirst(3);
+        // System.out.println(num);
+        // prev
+        // next
+        // data
 
+        // LinkedList<String> animal = new LinkedList<>();
+        // animal.add("lion");
+        // animal.add("leopard");
+        // animal.add("goat");
+        // animal.add("dog");
+        // System.out.println(animal);
+        // animal.add(2,"tiger");
+        // System.out.println(animal);
+
+        Map<String,Integer> num = new HashMap<>();
+        num.put("one", 1);
+        num.put("Two", 2);
+        num.put("Three", 3);
+        num.put("Four", 4);
         System.out.println(num);
-    }
-}
-class compr implements Comparator<Integer>{
-    public int compare(Integer num1,Integer num2){
-        int value = num1.compareTo(num2);
-        if(value>0){
-            return -1;
+        System.out.println(num.keySet());
+        System.out.println(num.values());
+        System.out.println(num.entrySet());
 
-        }
-        else if(value<0){
-            return  1;
-        }
-        else{
-            return 0;
-        }
-        
+        // HashMap
+
+
+
+
     }
 }
