@@ -310,17 +310,62 @@ class Collection{
         // animal.add(2,"tiger");
         // System.out.println(animal);
 
-        Map<String,Integer> num = new HashMap<>();
-        num.put("one", 1);
-        num.put("Two", 2);
-        num.put("Three", 3);
-        num.put("Four", 4);
-        System.out.println(num);
-        System.out.println(num.keySet());
-        System.out.println(num.values());
-        System.out.println(num.entrySet());
+        // Map<String,Integer> num = new HashMap<>();
+        // num.put("one", 1);
+        // num.put("Two", 2);
+        // num.put("Three", 3);
+        // num.put("Four", 4);
+        // System.out.println(num);
+        // System.out.println(num.keySet());
+        // System.out.println(num.values());
+        // System.out.println(num.entrySet());
 
         // HashMap
+        // HashMap<String,Integer> lang = new HashMap<>();
+        // lang.put("rollno",123 );
+        // lang.put("rollno1",1234 );
+        // lang.put("rollno2",12345 );
+        // lang.put("rollno3",123456 );
+        // System.out.println(lang.get("rollno"));
+
+        // for(String i:lang.keySet()){
+        //     System.out.println(i);
+            
+        // }
+// TreeMap<String ,Integer> num = new TreeMap<>();
+// num.put("two", 2);
+// num.put("three", 3);
+// System.out.print(num);
+// HashMap<String,Integer> lang = new HashMap<>(num);
+// lang.put("one", 1);
+// System.out.print(lang);
+
+// LinkedHashMap<String,Integer> num = new LinkedHashMap<>();
+// num.put("one", 1);
+// num.put("two", 2);
+// num.put("three",3 );
+// System.out.println(num);
+// num.putIfAbsent("four", 4);
+// System.out.println(num);
+// num.putIfAbsent("three",3);
+// System.out.println(num);
+
+
+// TreeMap<String ,Integer> num = new TreeMap<>();
+// num.put("two", 2);
+
+// num.put("one", 1);
+// num.put("three", 3);
+// System.out.println(num);
+// num.putIfAbsent("four", 4);
+
+// TreeMap<String ,Integer> num1 = new TreeMap<>();
+// num1.put("five", 5);
+// num1.putAll(num);
+// System.out.println(num1);
+
+
+
 
 
 
