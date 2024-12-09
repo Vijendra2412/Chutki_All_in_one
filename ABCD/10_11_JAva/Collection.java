@@ -365,9 +365,37 @@ class Collection{
 // System.out.println(num1);
 
 
+// Set<Integer> set = new HashSet<>();
+// set.add(3);
+// set.add(1);
+// set.add(2);
+// set.add(1);
+
+// Set<Integer> set1 = new HashSet<>();
+// set.add(3);
+// set.add(4);
+
+// set1.addAll(set);
+// System.out.println(set1);
 
 
+HashSet<Integer> set = new HashSet<>();
+set.add(3);
+set.add(1);
+set.add(2);
+set.add(1);
+System.out.println(set);
+HashSet<Integer> set1 = new HashSet<>();
+set1.add(3);
+set1.add(4);
+System.out.println(set1);
 
+// set1.retainAll(set);
+// set1.removeAll(set);
+// System.out.println(set1);
+
+boolean result = set.containsAll(set1);
+System.out.println(result);
 
 
     }
